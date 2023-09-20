@@ -8,7 +8,7 @@ export const Nav = styled.div`
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    padding: 0 1.375rem;
+    padding: 0 22rem;
 `;
 
 export const LogoText = styled.h1`

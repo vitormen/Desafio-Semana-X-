@@ -6,8 +6,9 @@ import  { Container }  from "./AppStyles";
 function App() {
   return (
     <>
+    <Navbar/>
     <Container>
-      <Navbar/>
+      
       <RouteList/>
     </Container>
 
