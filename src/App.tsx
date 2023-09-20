@@ -1,14 +1,16 @@
-import { useState } from "react";
 import "./App.css";
+import { RouteList } from "./routes/routerList";
+import  Navbar  from "./components/navbar"
+import  { Container }  from "./AppStyles";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <h1>teste</h1>
-      </div>
+    <Container>
+      <Navbar/>
+      <RouteList/>
+    </Container>
+
     </>
   );
 }
