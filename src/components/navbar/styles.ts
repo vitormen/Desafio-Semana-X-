@@ -30,6 +30,7 @@ export const Link = styled.p`
   font-size: 1.125rem;
   font-weight: 400;
 `;
+
 export const MenuOptions = styled.div`
     display: flex;
     width: 21.1rem
