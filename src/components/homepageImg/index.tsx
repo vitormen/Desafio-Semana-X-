@@ -1,5 +1,5 @@
 import * as C from './styles.ts';
-import img from '../../assets/imgs/default-img.png';
+import img from '../../assets/default-img.png';
 const HomePageImg=  () =>{
 
     return(
