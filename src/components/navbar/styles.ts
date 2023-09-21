@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const Nav = styled.div`
-    font-family: Roboto Flex;
-    height: 5.75rem;
-    background: #FDFEFF;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    margin: 0 22rem;
-    justify-content: space-between;
+  font-family: Roboto Flex;
+  height: 5.75rem;
+  background: #fdfeff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 22rem;
+  justify-content: space-between;
 `;
 
 export const MenuLeft = styled.div`
@@ -42,63 +42,50 @@ type OptionProps = {
 };
 
 export const Option = styled.p<OptionProps>`
-
-    color: ${props => props.color};
-    font-family: Roboto Flex;
-    font-size: 1.125rem;
-    margin-left: 2.31rem;
-    cursor: pointer;
-    @media (max-width: 1750px){
-        margin-left: 1.2rem;
-    }
-`
+  color: ${(props) => props.color};
+  font-family: Roboto Flex;
+  font-size: 1.125rem;
+  margin-left: 2.31rem;
+  cursor: pointer;
+  @media (max-width: 1750px) {
+    margin-left: 1.2rem;
+  }
+`;
 
 export const Search = styled.div`
-    width: 22.1875rem;
-    border-radius: 0.5rem;
-    background: #EFF3F8;
-    color: #B4AEAE;
-    font-size: 1rem;
-    padding: 0.62rem 0.94rem;
-    display: flex;
-    align-items: center;
-    color: #B4AEAE;
-    margin-left: 3rem;
-    @media (max-width: 1750px){
-        width: 19rem;
-    }
-
-`
+  width: 22.1875rem;
+  border-radius: 0.5rem;
+  background: #eff3f8;
+  color: #b4aeae;
+  font-size: 1rem;
+  padding: 0.62rem 0.94rem;
+  display: flex;
+  align-items: center;
+  color: #b4aeae;
+  margin-left: 3rem;
+  @media (max-width: 1750px) {
+    width: 19rem;
+  }
+`;
 export const ImageSearch = styled.img`
   width: 1.5rem;
   height: 1.49863rem;
 `;
 export const SearchInput = styled.input`
+  width: 100%;
+  border: none;
+  background: #eff3f8;
+  color: #b4aeae;
+  font-size: 1rem;
+  padding-left: 0.75rem;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: #b4aeae;
+  }
+`;
 
-    width: 100%;
-    border: none;
-    background: #EFF3F8;
-    color: #B4AEAE;
-    font-size: 1rem;
-    padding-left: 0.75rem;
-    &:focus{
-        outline: none;
-    }
-    &::placeholder{
-        color: #B4AEAE;
-    }
-`
-
-
-export const User  = styled.div`
-    display: flex;
-    align-items: center;
-    margin-left: 0.87rem;
-    p{
-        margin-right: 0.25rem;
-    }
-
-`
 export const User = styled.div`
   display: flex;
   align-items: center;
