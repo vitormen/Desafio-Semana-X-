@@ -5,7 +5,7 @@ const HomePageImg=  () =>{
     return(
         <>
             <C.imgContainer>
-                <C.img src={img}/>
+                <C.styledimg src={img}/>
                 <C.imgText>
                     Conecte-se aos seus amigos e familiares usando recados e mensagens instantâneas
                 </C.imgText>
