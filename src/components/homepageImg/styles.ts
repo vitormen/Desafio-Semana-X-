@@ -6,7 +6,7 @@ export const imgContainer = styled.div `
   display: flex;
 `;
 
-export const img = styled.img `
+export const styledimg = styled.img `
     border-radius: 1rem;
     width: 50rem;
     height: 37.375rem;
