@@ -42,7 +42,9 @@ const Profile = () => {
           </C.LeftProfile>
 
           <C.DivEditProfile>
-            <C.EditProfile>Editar meu perfil</C.EditProfile>
+            <C.StyledNavLink to="/edit">
+              <C.EditProfile>Editar meu perfil</C.EditProfile>
+            </C.StyledNavLink>
           </C.DivEditProfile>
         </C.EditsAndLeftProfile>
         <C.CenterProfile>Boa tarde, Gabriel Barbosa</C.CenterProfile>
