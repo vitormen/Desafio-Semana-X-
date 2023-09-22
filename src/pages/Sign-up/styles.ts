@@ -6,6 +6,9 @@ export const Container = styled.div`
     padding: 0 22rem;
     height: calc(100vh - 8.75rem);
     font-family: Roboto Flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 
@@ -22,12 +25,14 @@ export const Card = styled.div`
     font-family: Roboto Flex;
     font-size: 1rem;
     padding: 1rem 1.5rem 1.87rem 1.5rem;
+    margin-left: 2rem;
 `
 
 
 type InputProps = { 
     widthButton: string;
     marginTop: string;
+    imgInput?: string;
 }
 
 export const Title = styled.h1`
@@ -76,9 +81,9 @@ export const Select = styled.select<InputProps>`
     border-radius: 0.5rem;
     background: #EFF3F8;
     border: none;
-    &:focus{
-        outline: none;
-    }
+    color: #000
+
+s
 `
 
 export const Button = styled.button`
@@ -93,4 +98,11 @@ export const Button = styled.button`
     border: none;
     cursor: pointer;
     margin-top: 2.19rem;
+`
+
+export const Option = styled.option`
+    color: #8D8D8D;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    border: 0.063rem solid #ED6D25;
 `
