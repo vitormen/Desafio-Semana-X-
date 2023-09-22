@@ -7,7 +7,7 @@ export const Nav = styled.div`
   display: flex;
   align-items: center;
   overflow: hidden;
-  margin: 0 22rem;
+  padding: 0 22rem;
   justify-content: space-between;
 `;
 
