@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+
+export const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+`;
 
 export const Nav = styled.div`
   font-family: Roboto Flex;
@@ -7,7 +12,7 @@ export const Nav = styled.div`
   display: flex;
   align-items: center;
   overflow: hidden;
-  margin: 0 22rem;
+  padding: 0 22rem;
   justify-content: space-between;
 `;
 
