@@ -47,7 +47,52 @@ const Profile = () => {
             </C.StyledNavLink>
           </C.DivEditProfile>
         </C.EditsAndLeftProfile>
-        <C.CenterProfile>Boa tarde, Gabriel Barbosa</C.CenterProfile>
+
+        <C.CenterProfile>
+          <C.DivTopProfile>
+            <C.FirstPhrase>Boa Tarde, Gabriel Barbosa</C.FirstPhrase>
+            <C.DivSecondPhrase>
+              <C.SecondPhrase>
+                Programar sem café é igual poeta sem poesia.
+              </C.SecondPhrase>
+            </C.DivSecondPhrase>
+          </C.DivTopProfile>
+
+          <C.EmojisProfile>
+            <C.EmojisNameImg>
+              <C.EmojisName>Fãs</C.EmojisName>
+              <C.Emojis>
+                <C.YellowStar></C.YellowStar>
+                <C.SubTitle>85</C.SubTitle>
+              </C.Emojis>
+            </C.EmojisNameImg>
+
+            <C.EmojisNameImg>
+              <C.EmojisName>Confiável</C.EmojisName>
+              <C.Emojis>
+                <C.Smiley></C.Smiley>
+                <C.Smiley></C.Smiley>
+              </C.Emojis>
+            </C.EmojisNameImg>
+
+            <C.EmojisNameImg>
+              <C.EmojisName>Legal</C.EmojisName>
+              <C.Emojis>
+                <C.Like></C.Like>
+                <C.Like></C.Like>
+                <C.Like></C.Like>
+              </C.Emojis>
+            </C.EmojisNameImg>
+
+            <C.EmojisNameImg>
+              <C.EmojisName>Sexy</C.EmojisName>
+              <C.Emojis>
+                <C.Heart></C.Heart>
+                <C.Heart></C.Heart>
+              </C.Emojis>
+            </C.EmojisNameImg>
+          </C.EmojisProfile>
+        </C.CenterProfile>
 
         <C.FriendsAndComunity>
           <C.RightFriends>
