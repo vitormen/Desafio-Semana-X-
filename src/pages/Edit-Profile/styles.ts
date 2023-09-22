@@ -88,4 +88,4 @@ export const CenterProfile = styled.div`
 
   margin: 0 2rem;
 `;
-
+//
