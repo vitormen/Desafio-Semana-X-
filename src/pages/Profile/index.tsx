@@ -1,6 +1,26 @@
 import Navbar from "../../components/navbar";
 import UserImage from "../../assets/User.png";
 
+import Fernando from "../../assets/Fernando.png";
+import Ana from "../../assets/Ana.png";
+import Carlos from "../../assets/Carlos.png";
+import Vitor from "../../assets/Vitor.png";
+import Matheus from "../../assets/Matheus.png";
+import Ramos from "../../assets/Ramos.png";
+import Eiji from "../../assets/Eiji.png";
+import Julia from "../../assets/Julia.png";
+import Carol from "../../assets/Carol.png";
+
+import Carros from "../../assets/Carros.png";
+import Desenhos from "../../assets/Desenhos.png";
+import Crazy from "../../assets/Crazy.png";
+import Fofos from "../../assets/Fofos.png";
+import Animes from "../../assets/Animes.png";
+import Leitura from "../../assets/Leitura.png";
+import MeuOvo from "../../assets/MeuOvo.png";
+import MyBooks from "../../assets/MyBooks.png";
+import Cafeee from "../../assets/Cafeee.png";
+
 import * as C from "./styles";
 
 const Profile = () => {
@@ -28,8 +48,113 @@ const Profile = () => {
         <C.CenterProfile>Boa tarde, Gabriel Barbosa</C.CenterProfile>
 
         <C.FriendsAndComunity>
-          <C.RightFriends>AMIGOS</C.RightFriends>
-          <C.RightComunity>COMUNIDADES</C.RightComunity>
+          <C.RightFriends>
+            <C.RightFriendsTitle>
+              <C.TitleFriends>Amigos (248)</C.TitleFriends>
+              <C.SeeAll>Ver Todos</C.SeeAll>
+            </C.RightFriendsTitle>
+
+            <C.DivFriends>
+              <C.FriendsNameImg>
+                <C.FriendsImage src={Fernando}></C.FriendsImage>
+                <C.FriendsName>Fernando</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.FriendsImage src={Ana}></C.FriendsImage>
+                <C.FriendsName>Ana</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.FriendsImage src={Carlos}></C.FriendsImage>
+                <C.FriendsName>Carlos</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.FriendsImage src={Vitor}></C.FriendsImage>
+                <C.FriendsName>Carlos</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.FriendsImage src={Matheus}></C.FriendsImage>
+                <C.FriendsName>Vitor</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.FriendsImage src={Ramos}></C.FriendsImage>
+                <C.FriendsName>Matheus</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.FriendsImage src={Eiji}></C.FriendsImage>
+                <C.FriendsName>Ramos</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.FriendsImage src={Julia}></C.FriendsImage>
+                <C.FriendsName>Eiji</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.FriendsImage src={Carol}></C.FriendsImage>
+                <C.FriendsName>Carol</C.FriendsName>
+              </C.FriendsNameImg>
+            </C.DivFriends>
+          </C.RightFriends>
+
+          <C.RightFriends>
+            <C.RightFriendsTitle>
+              <C.TitleFriends>Comunidades (42)</C.TitleFriends>
+              <C.SeeAll>Ver Todos</C.SeeAll>
+            </C.RightFriendsTitle>
+
+            <C.DivFriends>
+              <C.FriendsNameImg>
+                <C.ComunityImage src={Carros}></C.ComunityImage>
+                <C.FriendsName>Carros</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.ComunityImage src={Desenhos}></C.ComunityImage>
+                <C.FriendsName>Desenhos</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.ComunityImage src={Crazy}></C.ComunityImage>
+                <C.FriendsName>Crazy</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.ComunityImage src={Fofos}></C.ComunityImage>
+                <C.FriendsName>Fofos</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.ComunityImage src={Animes}></C.ComunityImage>
+                <C.FriendsName>Animes</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.ComunityImage src={Leitura}></C.ComunityImage>
+                <C.FriendsName>Leitura</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.ComunityImage src={MeuOvo}></C.ComunityImage>
+                <C.FriendsName>Meu Ovo</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.ComunityImage src={MyBooks}></C.ComunityImage>
+                <C.FriendsName>My Books</C.FriendsName>
+              </C.FriendsNameImg>
+
+              <C.FriendsNameImg>
+                <C.ComunityImage src={Cafeee}></C.ComunityImage>
+                <C.FriendsName>Cafeee</C.FriendsName>
+              </C.FriendsNameImg>
+            </C.DivFriends>
+          </C.RightFriends>
         </C.FriendsAndComunity>
       </C.DivCenter>
     </>
