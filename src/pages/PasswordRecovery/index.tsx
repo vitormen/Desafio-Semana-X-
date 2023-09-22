@@ -23,8 +23,13 @@ const PasswordRecovery = () => {
                     <C.EmailInput type="email" id="email" name="email" placeholder="E-mail cadastrado"></C.EmailInput>
 
                     <C.SendButton>Enviar Código</C.SendButton>
-                    {/*<C.ClickText>Lembrou sua Senha?</C.ClickText>*/}
-                    {/*<C.AlternativeButton>Entrar com as credenciais</C.AlternativeButton>*/}
+
+                    {/*Vai ser necessario mudar isso no futuro para que se torne algo clicavel, pois no momento se trata somente de uma TAG <P></P>*/}
+                    <C.ClickText>
+                        <p>Lembrou sua Senha?</p>
+                    </C.ClickText>
+
+                    <C.AlternativeButton>Entrar com as credenciais</C.AlternativeButton>
                 </C.RecoveryMenu>
             </C.PageContainer>
             <Footer/>

@@ -6,6 +6,7 @@ export const footer = styled.div`
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
+  background: white;
 
 `;
 
