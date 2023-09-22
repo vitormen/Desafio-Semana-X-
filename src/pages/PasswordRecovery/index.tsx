@@ -29,7 +29,7 @@ const PasswordRecovery = () => {
                         <p>Lembrou sua Senha?</p>
                     </C.ClickText>
 
-                    {/*<C.AlternativeButton>Entrar com as credenciais</C.AlternativeButton>*/}
+                    <C.AlternativeButton>Entrar com as credenciais</C.AlternativeButton>
                 </C.RecoveryMenu>
             </C.PageContainer>
             <Footer/>
