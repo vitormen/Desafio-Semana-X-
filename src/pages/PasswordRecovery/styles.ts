@@ -75,3 +75,13 @@ export const SendButton = styled.button`
   font-weight: 400;
   line-height: normal;
 `;
+
+export const ClickText = styled.p `
+  color: #ED6D25;
+  font-family: Roboto Flex;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 6.41rem 6.5rem 0.94rem 7.19rem;
+`;
