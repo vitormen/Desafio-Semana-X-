@@ -92,6 +92,72 @@ const Profile = () => {
               </C.Emojis>
             </C.EmojisNameImg>
           </C.EmojisProfile>
+
+          <C.AboutYou>
+            <C.DivAboutYou>
+              <C.AboutYouTitle>Relacionamento:</C.AboutYouTitle>
+              <C.AboutYouSubTitle>Solteiro</C.AboutYouSubTitle>
+            </C.DivAboutYou>
+
+            <C.DivAboutYou>
+              <C.AboutYouTitle>Aniversário:</C.AboutYouTitle>
+              <C.AboutYouSubTitle>21 de julho</C.AboutYouSubTitle>
+            </C.DivAboutYou>
+
+            <C.DivAboutYou>
+              <C.AboutYouTitle>Idade:</C.AboutYouTitle>
+              <C.AboutYouSubTitle>22</C.AboutYouSubTitle>
+            </C.DivAboutYou>
+
+            <C.DivAboutYou>
+              <C.AboutYouTitle>Quem sou eu:</C.AboutYouTitle>
+              <C.AboutYouSubTitle>Programador</C.AboutYouSubTitle>
+            </C.DivAboutYou>
+
+            <C.DivAboutYou>
+              <C.AboutYouTitle>Moro:</C.AboutYouTitle>
+              <C.AboutYouSubTitle>Guaratã</C.AboutYouSubTitle>
+            </C.DivAboutYou>
+
+            <C.DivAboutYou>
+              <C.AboutYouTitle>País:</C.AboutYouTitle>
+              <C.AboutYouSubTitle>Brasil</C.AboutYouSubTitle>
+            </C.DivAboutYou>
+
+            <C.DivAboutYou>
+              <C.AboutYouTitle>Cidade:</C.AboutYouTitle>
+              <C.AboutYouSubTitle>São Paulo</C.AboutYouSubTitle>
+            </C.DivAboutYou>
+          </C.AboutYou>
+
+          <C.DivPreferences>
+            <C.Preferences>
+              <C.NamePreferences>Musicas:</C.NamePreferences>
+              <C.TypesPrefences>
+                <C.NameTypesPreferences>Trap</C.NameTypesPreferences>
+              </C.TypesPrefences>
+              <C.TypesPrefences className="hide-on-mobile">
+                <C.NameTypesPreferences>Rap</C.NameTypesPreferences>
+              </C.TypesPrefences>
+              <C.TypesPrefences className="hide-on-mobile">
+                <C.NameTypesPreferences>Indie</C.NameTypesPreferences>
+              </C.TypesPrefences>
+              <C.PreferencesSeeAll>Ver Todos</C.PreferencesSeeAll>
+            </C.Preferences>
+
+            <C.Preferences style={{ marginBottom: "1.75rem" }}>
+              <C.NamePreferences>Filmes:</C.NamePreferences>
+              <C.TypesPrefences>
+                <C.NameTypesPreferences>A rede social</C.NameTypesPreferences>
+              </C.TypesPrefences>
+              <C.TypesPrefences className="hide-on-mobile">
+                <C.NameTypesPreferences>
+                  Meu amigo totoro
+                </C.NameTypesPreferences>
+              </C.TypesPrefences>
+              <C.PreferencesSeeAll>Ver Todos</C.PreferencesSeeAll>
+            </C.Preferences>
+          </C.DivPreferences>
         </C.CenterProfile>
 
         <C.FriendsAndComunity>

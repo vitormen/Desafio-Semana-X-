@@ -10,10 +10,9 @@ export const Nav = styled.div`
   height: 5.75rem;
   background: #fdfeff;
   display: flex;
-  align-items: center;
   overflow: hidden;
-  padding: 0 22rem;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 
 export const MenuLeft = styled.div`
@@ -34,6 +33,7 @@ export const Link = styled.p`
   color: #4b4b4b;
   font-size: 1.125rem;
   font-weight: 400;
+  margin-left: 57.81rem;
 `;
 
 export const MenuOptions = styled.div`
@@ -52,9 +52,6 @@ export const Option = styled.p<OptionProps>`
   font-size: 1.125rem;
   margin-left: 2.31rem;
   cursor: pointer;
-  @media (max-width: 1750px) {
-    margin-left: 1.2rem;
-  }
 `;
 
 export const Search = styled.div`
@@ -64,13 +61,10 @@ export const Search = styled.div`
   color: #b4aeae;
   font-size: 1rem;
   padding: 0.62rem 0.94rem;
+  margin-left: 8.87rem;
   display: flex;
   align-items: center;
   color: #b4aeae;
-  margin-left: 3rem;
-  @media (max-width: 1750px) {
-    width: 19rem;
-  }
 `;
 export const ImageSearch = styled.img`
   width: 1.5rem;
