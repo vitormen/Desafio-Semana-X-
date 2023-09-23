@@ -91,7 +91,7 @@ type InputProps = {
 }
 export const divSelect = styled.div`
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   margin-right: 6.63rem;
 `;
 export const AreaSelect = styled.div`

@@ -34,25 +34,7 @@ const Profile = () => {
         <C.CenterProfile>
             <C.title>Editar informações
           </C.title>
-         <C.divSelect>
-                    <C.AreaSelect onClick={() => setOptions(!options)}>
-                        <C.Select >
-                            {selectValue === ""? "Relacionamento" : selectValue}
-                        </C.Select>
-                        <C.Arrowimg src={Arrow} alt="caretdown" />
-                        {options &&
-                            <C.AreaOptions>
-                                {Options.map((option, index, Options) => (
-                                    <div key={index}>
-                                        <C.Option onClick={() => setSelecValue(option.name)}>{option.name}</C.Option>
-                                        {index !== Options.length - 1 && <C.LineOption></C.LineOption>}
-                                    </div>
-                                    ))}
-                            </C.AreaOptions>
-                        }
-        
-                    </C.AreaSelect>
-                   </C.divSelect>
+
                       <C.divInput>
                          <C.Input widthButton={"13.4375rem"} marginTop={"5.75rem"} type="text" id="Name" name="Name" placeholder="Profissão"></C.Input>
 
@@ -69,7 +51,26 @@ const Profile = () => {
 
                         <C.Input widthButton={"13.8125rem"} marginTop={"1.5rem"} type="password" id="password" name="password" placeholder="Repetir senha"></C.Input>
                         </C.divInput>
-                       
+
+                        <C.divSelect>
+                            <C.AreaSelect onClick={() => setOptions(!options)}>
+                              <C.Select >
+                                {selectValue === ""? "Relacionamento" : selectValue}
+                              </C.Select>
+                              <C.Arrowimg src={Arrow} alt="caretdown" />
+                                {options &&
+                              <C.AreaOptions>
+                                {Options.map((option, index, Options) => (
+                                    <div key={index}>
+                                        <C.Option onClick={() => setSelecValue(option.name)}>{option.name}</C.Option>
+                                        {index !== Options.length - 1 && <C.LineOption></C.LineOption>}
+                                    </div>
+                                    ))}
+                              </C.AreaOptions>
+                        }
+        
+                    </C.AreaSelect>
+                   </C.divSelect>
                     <C.Button1>Salvar</C.Button1>
 
                   
