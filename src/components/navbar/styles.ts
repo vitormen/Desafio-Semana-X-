@@ -12,7 +12,7 @@ export const Nav = styled.div`
   display: flex;
   overflow: hidden;
   justify-content: center;
-  gap: 16rem;
+  gap: 8rem;
   flex-wrap: wrap;
 `;
 
@@ -52,9 +52,6 @@ export const Option = styled.p<OptionProps>`
   font-size: 1.125rem;
   margin-left: 2.31rem;
   cursor: pointer;
-  @media (max-width: 1750px) {
-    margin-left: 1.2rem;
-  }
 `;
 
 export const Search = styled.div`
@@ -67,9 +64,6 @@ export const Search = styled.div`
   display: flex;
   align-items: center;
   color: #b4aeae;
-  @media (max-width: 1750px) {
-    width: 19rem;
-  }
 `;
 export const ImageSearch = styled.img`
   width: 1.5rem;
