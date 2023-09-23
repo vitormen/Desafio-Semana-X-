@@ -1,16 +1,22 @@
 import styled from "styled-components";
 
+import { NavLink } from "react-router-dom";
+
+export const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+`;
+
 export const PageContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    font-family: Roboto Flex;
-    box-sizing: border-box;
-    background-color: #d9e6f7;
-    padding: 0.22rem;
-    height: calc(100vh - 8.75rem);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-family: Roboto Flex;
+  box-sizing: border-box;
+  background-color: #d9e6f7;
+  padding: 0.22rem;
+  height: calc(100vh - 8.75rem);
 `;
 
 export const RecoveryMenu = styled.div`
@@ -19,7 +25,7 @@ export const RecoveryMenu = styled.div`
   display: flex;
   flex-shrink: 0;
   border-radius: 1rem;
-  background: #FDFEFF;
+  background: #fdfeff;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   flex-direction: column;
   align-items: end;
@@ -29,7 +35,7 @@ export const RecoveryMenu = styled.div`
 `;
 
 export const h1 = styled.h1`
-  color: #ED6D25;  
+  color: #ed6d25;
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0;
@@ -39,7 +45,6 @@ export const MenuHeader = styled.h1`
   text-align: center;
   width: 100%;
   margin: 1rem 0 0 0;
-  
 `;
 
 export const EmailInput = styled.input`
@@ -49,13 +54,13 @@ export const EmailInput = styled.input`
   font-size: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  background: #EFF3F8;
+  background: #eff3f8;
   border: none;
-  &:focus{
-    outline:none;
+  &:focus {
+    outline: none;
   }
-  &::placeholder{
-    color: #868686;;
+  &::placeholder {
+    color: #868686;
   }
 `;
 
@@ -65,9 +70,9 @@ export const SendButton = styled.button`
   height: 3.1875rem;
   flex-shrink: 0;
   border-radius: 0.5rem;
-  background: #ED6D25;
+  background: #ed6d25;
   text-align: center;
-  color: #FFF;
+  color: #fff;
   border: none;
   cursor: pointer;
   font-family: Roboto Flex;
@@ -76,8 +81,8 @@ export const SendButton = styled.button`
   line-height: normal;
 `;
 
-export const ClickText = styled.div `
-  color: #ED6D25;
+export const ClickText = styled.div`
+  color: #ed6d25;
   font-family: Roboto Flex;
   font-size: 1.125rem;
   font-style: normal;
@@ -93,9 +98,9 @@ export const AlternativeButton = styled.button`
   height: 3.1875rem;
   flex-shrink: 0;
   border-radius: 0.5rem;
-  background: #EFF3F8;
+  background: #eff3f8;
   border: none;
-  color: #ED6D25;
+  color: #ed6d25;
   font-family: Roboto Flex;
   font-size: 1.125rem;
   font-style: normal;
