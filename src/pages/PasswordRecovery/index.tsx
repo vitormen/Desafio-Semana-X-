@@ -37,9 +37,9 @@ const PasswordRecovery = () => {
             <p>Lembrou sua Senha?</p>
           </C.ClickText>
 
-          <C.StyledNavLink to="/newpassword">
+          <C.StyledLink to="/newpassword">
             <C.AlternativeButton>Entrar com as credenciais</C.AlternativeButton>
-          </C.StyledNavLink>
+          </C.StyledLink>
         </C.RecoveryMenu>
       </C.PageContainer>
       <Footer />

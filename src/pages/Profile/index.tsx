@@ -42,21 +42,19 @@ const Profile = () => {
           </C.LeftProfile>
 
           <C.DivEditProfile>
-            <C.StyledNavLink to="/edit">
+            <C.StyledLink to="/edit">
               <C.EditProfile>Editar meu perfil</C.EditProfile>
-            </C.StyledNavLink>
+            </C.StyledLink>
           </C.DivEditProfile>
         </C.EditsAndLeftProfile>
 
         <C.CenterProfile>
-          <C.DivTopProfile>
-            <C.FirstPhrase>Boa Tarde, Gabriel Barbosa</C.FirstPhrase>
-            <C.DivSecondPhrase>
-              <C.SecondPhrase>
-                Programar sem café é igual poeta sem poesia.
-              </C.SecondPhrase>
-            </C.DivSecondPhrase>
-          </C.DivTopProfile>
+          <C.FirstPhrase>Boa Tarde, Gabriel Barbosa</C.FirstPhrase>
+          <C.DivSecondPhrase>
+            <C.SecondPhrase>
+              Programar sem café é igual poeta sem poesia.
+            </C.SecondPhrase>
+          </C.DivSecondPhrase>
 
           <C.EmojisProfile>
             <C.EmojisNameImg>

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export const StyledNavLink = styled(NavLink)`
+export const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
