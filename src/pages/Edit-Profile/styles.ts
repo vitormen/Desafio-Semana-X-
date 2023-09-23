@@ -68,7 +68,6 @@ export const CenterProfile = styled.div`
   border-radius: 1rem;
   background: #fdfeff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
   margin: 0 2rem;
 `;
 
@@ -124,7 +123,6 @@ export const Button = styled.button`
     border-radius: 0.5rem;
     background: #ED6D25;
     padding: 0.94rem;
-    align-text: center;
     color: #FFF;
     font-size: 1.125rem;
     border: none;
@@ -167,7 +165,6 @@ export const LineOption = styled.div`
 export const divInput = styled.div`
   display: flex;
   flex-direction: column;
-  row-gap: 1.19rem;
   margin-left: 2.88rem;
 `;
 export const Input = styled.input<InputProps>` 
@@ -206,3 +203,4 @@ export const Button1 = styled.button`
     margin-top: 2.19rem;
     font-family: Roboto Flex;
     `;
+    //
