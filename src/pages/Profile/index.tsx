@@ -124,7 +124,7 @@ const Profile = () => {
               <C.AboutYouSubTitle>Brasil</C.AboutYouSubTitle>
             </C.DivAboutYou>
 
-            <C.DivAboutYou style={{ marginBottom: "14.02rem" }}>
+            <C.DivAboutYou>
               <C.AboutYouTitle>Cidade:</C.AboutYouTitle>
               <C.AboutYouSubTitle>São Paulo</C.AboutYouSubTitle>
             </C.DivAboutYou>
