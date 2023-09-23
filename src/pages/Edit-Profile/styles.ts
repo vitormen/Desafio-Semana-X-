@@ -20,6 +20,7 @@ export const LeftProfile = styled.div`
 `;
 
 export const divImg = styled.div`
+
   width: 11.5rem;
   flex-shrink: 0;
   stroke-width: 3px;
