@@ -20,7 +20,6 @@ export const LeftProfile = styled.div`
 `;
 
 export const divImg = styled.div`
-
   width: 11.5rem;
   flex-shrink: 0;
   stroke-width: 3px;
@@ -42,7 +41,7 @@ export const UserImage = styled.img`
 
 export const name = styled.p`
   color: #4b4b4b;
-  font-family: Roboto Flex;
+
   font-size: 1.5rem;
   margin-bottom: 0rem;
   margin-top: 1.19rem;
@@ -73,7 +72,7 @@ export const DivButton = styled.div`
 
 export const title = styled.h1`
   color: #ed6d25;
-  font-family: Roboto Flex;
+
   font-size: 2.25rem;
   letter-spacing: 0.1875rem;
   text-align: center;
@@ -110,7 +109,6 @@ export const AreaSelect = styled.div`
 export const Select = styled.span`
   color: #868686;
   font-size: 1rem;
-  font-family: Roboto Flex;
 `;
 export const Arrowimg = styled.img`
   width: 1.3125rem;
@@ -128,7 +126,6 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   margin-top: 2.19rem;
-  font-family: Roboto Flex;
 `;
 export const AreaOptions = styled.div`
   margin-top: 0.13rem;
@@ -145,7 +142,7 @@ export const AreaOptions = styled.div`
 `;
 export const Option = styled.p`
   color: #8d8d8d;
-  font-family: Roboto Flex;
+
   font-size: 0.875rem;
   margin: 0;
   padding: 0.12rem 0 0.5rem 0;
@@ -193,6 +190,5 @@ export const Button1 = styled.button`
   border: none;
   cursor: pointer;
   margin-top: 2.19rem;
-  font-family: Roboto Flex;
 `;
 //

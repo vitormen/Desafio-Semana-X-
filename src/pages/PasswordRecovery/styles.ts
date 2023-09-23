@@ -12,9 +12,9 @@ export const PageContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  font-family: Roboto Flex;
+
   box-sizing: border-box;
-  background-color: #d9e6f7;
+
   padding: 0.22rem;
   height: calc(100vh - 8.75rem);
 `;
@@ -75,7 +75,7 @@ export const SendButton = styled.button`
   color: #fff;
   border: none;
   cursor: pointer;
-  font-family: Roboto Flex;
+
   font-size: 1.125rem;
   font-weight: 400;
   line-height: normal;
@@ -83,7 +83,7 @@ export const SendButton = styled.button`
 
 export const ClickText = styled.div`
   color: #ed6d25;
-  font-family: Roboto Flex;
+
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
@@ -101,7 +101,7 @@ export const AlternativeButton = styled.button`
   background: #eff3f8;
   border: none;
   color: #ed6d25;
-  font-family: Roboto Flex;
+
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
