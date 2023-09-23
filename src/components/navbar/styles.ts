@@ -6,7 +6,6 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 export const Nav = styled.div`
-  font-family: Roboto Flex;
   height: 5.75rem;
   background: #fdfeff;
   display: flex;
@@ -48,7 +47,7 @@ type OptionProps = {
 
 export const Option = styled.p<OptionProps>`
   color: ${(props) => props.color};
-  font-family: Roboto Flex;
+
   font-size: 1.125rem;
   margin-left: 2.31rem;
   cursor: pointer;

@@ -8,18 +8,16 @@ export const footer = styled.div`
   align-items: center;
   background: white;
 
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 `;
 
 export const footerText = styled.p`
-  color: #ED6D25;
+  color: #ed6d25;
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
-  font-family: Roboto Flex;
+
   font-size: 1.125rem;
   line-height: 1.5rem;
-
-
 `;
-
-
-

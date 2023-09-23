@@ -8,10 +8,9 @@ export const StyledLink = styled(Link)`
 
 export const Container = styled.div`
   box-sizing: border-box;
-  background-color: #d9e6f7;
   padding: 0 22rem;
   height: calc(100vh - 8.75rem);
-  font-family: Roboto Flex;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +26,7 @@ export const Card = styled.div`
   flex-direction: column;
   align-items: end;
   color: #868686;
-  font-family: Roboto Flex;
+
   font-size: 1rem;
   padding: 1rem 1.5rem 1.87rem 1.5rem;
   margin-left: 2rem;
@@ -43,13 +42,11 @@ export const Title = styled.p`
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0;
-  font-family: Roboto Flex;
 `;
 export const Header = styled.span`
   text-align: center;
   width: 100%;
   margin: 1rem 0 0 0;
-  font-family: Roboto Flex;
 `;
 
 export const Input = styled.input<InputProps>`
@@ -61,7 +58,7 @@ export const Input = styled.input<InputProps>`
   border-radius: 0.5rem;
   background: #eff3f8;
   border: none;
-  font-family: Roboto Flex;
+
   &:focus {
     outline: none;
   }
@@ -92,7 +89,6 @@ export const AreaSelect = styled.div`
 export const Select = styled.span`
   color: #868686;
   font-size: 1rem;
-  font-family: Roboto Flex;
 `;
 export const Arrowimg = styled.img`
   width: 1.3125rem;
@@ -111,7 +107,6 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   margin-top: 2.19rem;
-  font-family: Roboto Flex;
 `;
 export const AreaOptions = styled.div`
   margin-top: 0.13rem;
@@ -128,7 +123,7 @@ export const AreaOptions = styled.div`
 `;
 export const Option = styled.p`
   color: #8d8d8d;
-  font-family: Roboto Flex;
+
   font-size: 0.875rem;
   margin: 0;
   padding: 0.12rem 0 0.5rem 0;
