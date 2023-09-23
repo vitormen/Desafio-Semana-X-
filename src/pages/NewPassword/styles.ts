@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
 
 export const PageContainer = styled.div`
   display: flex;
@@ -19,14 +24,13 @@ export const NewPasswordMenu = styled.div`
   display: flex;
   flex-shrink: 0;
   border-radius: 1rem;
-  background: #FDFEFF;
+  background: #fdfeff;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   flex-direction: column;
   align-items: end;
   color: #868686;
   font-size: 1rem;
   padding: 1rem 1.5rem 1.87rem 1.5rem;
-
 `;
 
 export const MenuHeader = styled.div`
@@ -35,19 +39,17 @@ export const MenuHeader = styled.div`
   margin: 1rem 0 0 0;
 `;
 
-export const Logo = styled.img`
-
-`;
+export const Logo = styled.img``;
 
 export const h1 = styled.h1`
-  color: #ED6D25;
+  color: #ed6d25;
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0;
 `;
 
 export const input = styled.input`
-  margin-top: ${props => props.marginTop};
+  margin-top: ${(props) => props.marginTop};
   width: 21rem;
   height: 3.1875rem;
   font-size: 1rem;
@@ -68,9 +70,9 @@ export const SaveButton = styled.button`
   height: 3.1875rem;
   flex-shrink: 0;
   border-radius: 0.5rem;
-  background: #ED6D25;
+  background: #ed6d25;
   text-align: center;
-  color: #FFF;
+  color: #fff;
   border: none;
   cursor: pointer;
   font-family: Roboto Flex;
@@ -79,8 +81,8 @@ export const SaveButton = styled.button`
   line-height: normal;
 `;
 
-export const ClickText = styled.div `
-  color: #ED6D25;
+export const ClickText = styled.div`
+  color: #ed6d25;
   font-family: Roboto Flex;
   font-size: 1.125rem;
   font-style: normal;
@@ -96,9 +98,9 @@ export const AlternativeButton = styled.button`
   height: 3.1875rem;
   flex-shrink: 0;
   border-radius: 0.5rem;
-  background: #EFF3F8;
+  background: #eff3f8;
   border: none;
-  color: #ED6D25;
+  color: #ed6d25;
   font-family: Roboto Flex;
   font-size: 1.125rem;
   font-style: normal;
