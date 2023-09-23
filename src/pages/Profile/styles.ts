@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AiOutlineStar, AiOutlineHeart } from "react-icons/ai";
 import { GoSmiley } from "react-icons/go";
 import { FiThumbsUp } from "react-icons/fi";
 
-export const StyledNavLink = styled(NavLink)`
+export const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
@@ -122,8 +122,6 @@ export const CenterProfile = styled.div`
   }
 `;
 
-export const DivTopProfile = styled.div``;
-
 export const FirstPhrase = styled.p`
   color: #4b4b4b;
   font-size: 1.625rem;
@@ -154,8 +152,6 @@ export const SecondPhrase = styled.p`
     font-size: 0.75rem;
   }
 `;
-
-export const DivMiddleProfile = styled.div``;
 
 export const EmojisProfile = styled.div`
   display: flex;
