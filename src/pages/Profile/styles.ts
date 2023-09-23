@@ -10,19 +10,24 @@ export const StyledNavLink = styled(NavLink)`
 
 export const DivCenter = styled.div`
   box-sizing: border-box;
-  padding: 0 22rem;
   margin-top: 3rem;
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 //------DO NOME COM IMAGEM E EDITAR PERFIL--------
 
 export const LeftProfile = styled.div`
-  max-width: 17.5rem;
+  width: 17.5rem;
+  max-width: 100%;
   border-radius: 1rem;
   background: #fdfeff;
   display: flex;
@@ -104,8 +109,6 @@ export const EditsAndLeftProfile = styled.div`
 //------DIV CENTRAL--------
 
 export const CenterProfile = styled.div`
-  max-width: 37rem;
-  width: 100%;
   border-radius: 1rem;
   background: #fdfeff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -114,7 +117,7 @@ export const CenterProfile = styled.div`
   flex-direction: column;
 
   @media (max-width: 768px) {
-    min-width: 20rem;
+    width: 20rem;
   }
 `;
 
@@ -130,8 +133,8 @@ export const FirstPhrase = styled.p`
 `;
 
 export const DivSecondPhrase = styled.div`
-  max-width: 34rem;
-  width: 100%;
+  width: 34rem;
+  max-width: 100%;
   border-radius: 0.625rem;
   background: #eff3f8;
 
@@ -215,6 +218,7 @@ export const Like = styled(FiThumbsUp)`
 
 export const AboutYou = styled.div`
   margin-top: 2rem;
+  margin-bottom: 14.02rem;
 `;
 
 export const DivAboutYou = styled.div`
@@ -320,8 +324,11 @@ export const SeeAll = styled.p`
 export const DivFriends = styled.div`
   display: flex;
   flex-wrap: wrap;
-  column-gap: 2.8rem;
   justify-content: center;
+  column-gap: 1.91rem;
+  @media (max-width: 768px) {
+    column-gap: 2.8rem;
+  }
 `;
 
 export const FriendsNameImg = styled.div`

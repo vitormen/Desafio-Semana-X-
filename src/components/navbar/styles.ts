@@ -10,10 +10,10 @@ export const Nav = styled.div`
   height: 5.75rem;
   background: #fdfeff;
   display: flex;
-  align-items: center;
   overflow: hidden;
-  padding: 0 22rem;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 16rem;
+  flex-wrap: wrap;
 `;
 
 export const MenuLeft = styled.div`
@@ -67,7 +67,6 @@ export const Search = styled.div`
   display: flex;
   align-items: center;
   color: #b4aeae;
-  margin-left: 3rem;
   @media (max-width: 1750px) {
     width: 19rem;
   }
