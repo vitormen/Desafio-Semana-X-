@@ -10,22 +10,33 @@ export const StyledNavLink = styled(NavLink)`
 
 export const DivCenter = styled.div`
   box-sizing: border-box;
-  padding: 0 22rem;
   margin-top: 3rem;
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
+//------DO NOME COM IMAGEM E EDITAR PERFIL--------
+
 export const LeftProfile = styled.div`
-  max-width: 17.5rem;
+  width: 17.5rem;
+  max-width: 100%;
   border-radius: 1rem;
   background: #fdfeff;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 768px) {
+    min-width: 20rem;
+  }
 `;
 
 export const divImg = styled.div`
@@ -35,7 +46,6 @@ export const divImg = styled.div`
   border: 3px solid #ed6d25;
   margin-top: 1.06rem;
   border-radius: 6.25rem;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,8 +54,11 @@ export const divImg = styled.div`
 export const UserImage = styled.img`
   border-radius: 6.25rem;
   max-width: 10.625rem;
-
   margin-bottom: 0rem;
+
+  @media (max-width: 768px) {
+    width: 7.75rem;
+  }
 `;
 
 export const name = styled.p`
@@ -53,6 +66,10 @@ export const name = styled.p`
   font-size: 1.5rem;
   margin-bottom: 0rem;
   margin-top: 1.19rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
 `;
 
 export const MaritalStatus = styled.p`
@@ -67,10 +84,12 @@ export const DivEditProfile = styled.div`
   width: 17.5rem;
   border-radius: 1rem;
   background: #fdfeff;
-  margin-top: 1.94rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    min-width: 20rem;
+  }
 `;
 
 export const EditProfile = styled.p`
@@ -82,30 +101,40 @@ export const EditProfile = styled.p`
 export const EditsAndLeftProfile = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 1.94rem;
 `;
+
+//------DO NOME COM IMAGEM E EDITAR PERFIL--------
+
 //------DIV CENTRAL--------
 
 export const CenterProfile = styled.div`
-  max-width: 37rem;
   border-radius: 1rem;
   background: #fdfeff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  margin: 0 2rem;
+  display: flex;
   padding: 0 1.5rem;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: 20rem;
+  }
 `;
 
-export const DivTopProfile = styled.div`
-  border: 1px solid black;
-`;
+export const DivTopProfile = styled.div``;
 
 export const FirstPhrase = styled.p`
   color: #4b4b4b;
   font-size: 1.625rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
 `;
 
 export const DivSecondPhrase = styled.div`
-  min-width: 34rem;
-  height: 2.46031rem;
+  width: 34rem;
+  max-width: 100%;
   border-radius: 0.625rem;
   background: #eff3f8;
 
@@ -118,6 +147,11 @@ export const DivSecondPhrase = styled.div`
 export const SecondPhrase = styled.p`
   color: #4b4b4b;
   font-size: 1.125rem;
+  margin: 0.75rem 0;
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
 `;
 
 export const DivMiddleProfile = styled.div``;
@@ -125,13 +159,14 @@ export const DivMiddleProfile = styled.div``;
 export const EmojisProfile = styled.div`
   display: flex;
   margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
 `;
 
 export const EmojisNameImg = styled.div`
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  margin-right: 2rem;
   border: 1px solid #fdfeff;
 `;
 
@@ -144,7 +179,7 @@ export const SubTitle = styled.p`
 export const EmojisName = styled.p`
   color: #4b4b4b;
   font-size: 1rem;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem 0;
 `;
 
 export const Emojis = styled.div`
@@ -181,18 +216,87 @@ export const Like = styled(FiThumbsUp)`
   margin-right: 0.37rem;
 `;
 
+export const AboutYou = styled.div`
+  margin-top: 2rem;
+  margin-bottom: 14.02rem;
+`;
+
+export const DivAboutYou = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+export const AboutYouTitle = styled.p`
+  color: #b4aeae;
+  font-size: 1rem;
+  margin: 0 0.31rem 0 0;
+`;
+
+export const AboutYouSubTitle = styled.p`
+  color: #4b4b4b;
+  font-size: 1rem;
+  margin: 0 0.31rem 1.5rem 0;
+`;
+
+export const DivPreferences = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+export const Preferences = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+`;
+
+export const NamePreferences = styled.p`
+  color: #b4aeae;
+  font-size: 1rem;
+  margin: 0 0.75rem 0 0;
+`;
+
+export const TypesPrefences = styled.div`
+  height: 1.75rem;
+  display: inline-flex;
+  padding: 0.125rem 1rem;
+  align-items: center;
+  border-radius: 1.875rem;
+  border: 1px solid #ed6d25;
+  margin-right: 0.88rem;
+`;
+
+export const NameTypesPreferences = styled.p`
+  color: #4b4b4b;
+  font-size: 0.875rem;
+  line-height: 1.5rem; /* 171.429% */
+`;
+
+export const PreferencesSeeAll = styled.p`
+  color: #ed6d25;
+  font-size: 0.875rem;
+  line-height: 1.5rem; /* 171.429% */
+  margin: 0;
+`;
+
 //------DIV CENTRAL--------
+
+//------DIV DE AMIGOS E COMUNIDADES--------
 
 export const FriendsAndComunity = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 `;
 
 export const RightFriends = styled.div`
   max-width: 17.5rem;
   border-radius: 1rem;
   background: #fdfeff;
-  margin-bottom: 2rem;
+  @media (max-width: 768px) {
+    min-width: 20rem;
+  }
 `;
 
 export const RightFriendsTitle = styled.div`
@@ -220,8 +324,11 @@ export const SeeAll = styled.p`
 export const DivFriends = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 1.6em;
+  justify-content: center;
+  column-gap: 1.91rem;
+  @media (max-width: 768px) {
+    column-gap: 2.8rem;
+  }
 `;
 
 export const FriendsNameImg = styled.div`
@@ -250,3 +357,4 @@ export const ComunityImage = styled.img`
   border-radius: 0.75rem;
   margin-bottom: 0rem;
 `;
+//------DIV DE AMIGOS E COMUNIDADES--------
