@@ -16,6 +16,7 @@ export const DivCenter = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  padding-bottom: 1.86rem;
 
   @media (max-width: 768px) {
     align-items: center;
@@ -218,7 +219,7 @@ export const Like = styled(FiThumbsUp)`
 
 export const AboutYou = styled.div`
   margin-top: 2rem;
-  margin-bottom: 14.02rem;
+  margin-bottom: 12.45rem;
 `;
 
 export const DivAboutYou = styled.div`
@@ -265,6 +266,12 @@ export const TypesPrefences = styled.div`
   border-radius: 1.875rem;
   border: 1px solid #ed6d25;
   margin-right: 0.88rem;
+
+  &.hide-on-mobile {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 `;
 
 export const NameTypesPreferences = styled.p`

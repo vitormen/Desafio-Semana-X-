@@ -136,10 +136,10 @@ const Profile = () => {
               <C.TypesPrefences>
                 <C.NameTypesPreferences>Trap</C.NameTypesPreferences>
               </C.TypesPrefences>
-              <C.TypesPrefences>
+              <C.TypesPrefences className="hide-on-mobile">
                 <C.NameTypesPreferences>Rap</C.NameTypesPreferences>
               </C.TypesPrefences>
-              <C.TypesPrefences>
+              <C.TypesPrefences className="hide-on-mobile">
                 <C.NameTypesPreferences>Indie</C.NameTypesPreferences>
               </C.TypesPrefences>
               <C.PreferencesSeeAll>Ver Todos</C.PreferencesSeeAll>
@@ -150,7 +150,7 @@ const Profile = () => {
               <C.TypesPrefences>
                 <C.NameTypesPreferences>A rede social</C.NameTypesPreferences>
               </C.TypesPrefences>
-              <C.TypesPrefences>
+              <C.TypesPrefences className="hide-on-mobile">
                 <C.NameTypesPreferences>
                   Meu amigo totoro
                 </C.NameTypesPreferences>
