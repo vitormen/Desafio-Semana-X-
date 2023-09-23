@@ -19,9 +19,9 @@ const NewPassword = () => {
                         <C.h1>Nova senha</C.h1>
                     </C.MenuHeader>
 
-                    <C.input type="text" id="code" name="code" placeholder="Informe o código"></C.input>
-                    <C.input type="password" id="password" name="password" placeholder="Nova Senha"></C.input>
-                    <C.input type="password" id="password-confirm" name="password-confirm" placeholder="Confirmar a senha"></C.input>
+                    <C.input marginTop={"2.25rem"} type="text" id="code" name="code" placeholder="Informe o código"></C.input>
+                    <C.input marginTop={"1.12rem"} type="password" id="password" name="password" placeholder="Nova Senha"></C.input>
+                    <C.input marginTop={"1.12rem"} type="password" id="password-confirm" name="password-confirm" placeholder="Confirmar a senha"></C.input>
 
                     <C.SaveButton>Salvar</C.SaveButton>
 
