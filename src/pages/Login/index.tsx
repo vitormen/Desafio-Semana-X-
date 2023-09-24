@@ -8,7 +8,7 @@ import CheckIcon from "../../assets/checkbox.png";
 import * as C from "./styles";
 
 const Login = () => {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState<boolean>(false);
 
   const handleCheckboxChange = () => {
     setChecked(!checked);
@@ -29,16 +29,16 @@ const Login = () => {
             <C.Title>Acesse o UOLkut</C.Title>
           </C.Header>
           <C.Input
-            widthbutton={"21rem"}
-            margintop={"0.69rem"}
+            $widthinput={"21rem"}
+            $margintop={"0.69rem"}
             type="email"
             id="email"
             name="email"
             placeholder="E-mail"
           ></C.Input>
           <C.Input
-            widthbutton={"21rem"}
-            margintop={"1.5rem"}
+            $widthinput={"21rem"}
+            $margintop={"1.5rem"}
             type="password"
             id="password"
             name="password"
@@ -52,14 +52,14 @@ const Login = () => {
 
             <C.Text>Lembrar minha senha</C.Text>
           </C.CheckboxContainer>
-
-          <Link to={"/profile"}>
-            <C.Button background={"#ED6D25"} color={"#FFF"}>
+          
+          <Link to={"/profile"} style={{textDecoration: "none"}}>
+            <C.Button $background={"#ED6D25"} $color={"#FFF"}>
               Entrar
             </C.Button>
           </Link>
-          <Link to={"/signup"}>
-            <C.Button background={"#EFF3F8"} color={"#ED6D25"}>
+          <Link to={"/signup"} style={{textDecoration: "none"}}>
+            <C.Button $background={"#EFF3F8"} $color={"#ED6D25"}>
               Criar conta
             </C.Button>
           </Link>
@@ -68,6 +68,7 @@ const Login = () => {
             style={{
               textAlign: "center",
               margin: "2rem 0 3.06rem 0",
+              textDecoration: "none"
             }}
           >
             <C.PasswordForgot>Esqueci a minha senha</C.PasswordForgot>
