@@ -56,18 +56,18 @@ const SignUp = () => {
             placeholder="E-mail"
           ></C.Input>
           <C.Input
-             $widthinput="21rem"
-             $margintop="1.5rem"
-             $widthmobileinput={"17.5625rem"}
+            $widthinput="21rem"
+            $margintop="1.5rem"
+            $widthmobileinput={"17.5625rem"}
             type="password"
             id="password"
             name="password"
             placeholder="Senha"
           ></C.Input>
           <C.Input
-             $widthinput="21rem"
-             $margintop="1rem"
-             $widthmobileinput={"17.0625rem"}
+            $widthinput="21rem"
+            $margintop="1rem"
+            $widthmobileinput={"17.0625rem"}
             type="text"
             id="name"
             name="name"
@@ -75,8 +75,8 @@ const SignUp = () => {
           ></C.Input>
           <C.AreaInputs>
             <C.Input
-               $widthinput="7.8125rem"
-               $margintop="1rem"
+              $widthinput="7.8125rem"
+              $margintop="1rem"
               type="text"
               id="birthday"
               name="birthday"
@@ -85,9 +85,9 @@ const SignUp = () => {
               value={date}
             ></C.Input>
             <C.Input
-               $widthinput="11.5rem"
-               $margintop="1rem"
-               $widthmobileinput={"8.5625rem"}
+              $widthinput="11.5rem"
+              $margintop="1rem"
+              $widthmobileinput={"8.5625rem"}
               type="text"
               id="profession"
               name="profession"

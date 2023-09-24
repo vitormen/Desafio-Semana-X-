@@ -17,6 +17,7 @@ export const Container = styled.div`
     height: calc(100vh - 5.75rem);
     align-items: start;
     margin-top: 1.06rem;
+    padding: 0;
   }
 `;
 
@@ -32,10 +33,10 @@ export const Card = styled.div`
   font-size: 1rem;
   padding: 1rem 1.5rem 1.87rem 1.5rem;
   margin-left: 2rem;
-
   @media (max-width: 768px) {
-    width: 20rem;
+    max-width: 20rem;
     height: 36.375rem;
+    margin-left: 0;
   }
 `;
 
@@ -53,6 +54,7 @@ export const Title = styled.p`
   @media (max-width: 768px) {
     font-size: 1.25rem;
     font-weight: 800;
+    margin-bottom: 1.5rem;
   }
 `;
 export const Header = styled.span`
@@ -77,7 +79,7 @@ export const Input = styled.input<InputProps>`
     color: #868686;
   }
   @media (max-width: 768px) {
-    width: ${(props) => props.$widthmobileinput};
+    max-width: ${(props) => props.$widthmobileinput};
     height: 2.3125rem;
     font-size: 0.875rem;
   }
@@ -138,7 +140,7 @@ export const Button = styled.button`
   margin-top: 2.19rem;
   @media (max-width: 768px) {
     font-size: 0.875rem;
-    width: 17.5625rem;
+    max-width: 17.5625rem;
     height: 2.3125rem;
   }
 `;
