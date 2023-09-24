@@ -47,33 +47,36 @@ const SignUp = () => {
             <C.Title>Cadastre-se o UOLkut</C.Title>
           </C.Header>
           <C.Input
-            widthbutton={"21rem"}
-            margintop={"0.69rem"}
+            $widthinput="21rem"
+            $margintop="0.69rem"
+            $widthmobileinput={"17.5625rem"}
             type="email"
             id="email"
             name="email"
             placeholder="E-mail"
           ></C.Input>
           <C.Input
-            widthbutton={"21rem"}
-            margintop={"1.5rem"}
+             $widthinput="21rem"
+             $margintop="1.5rem"
+             $widthmobileinput={"17.5625rem"}
             type="password"
             id="password"
             name="password"
             placeholder="Senha"
           ></C.Input>
           <C.Input
-            widthbutton={"21rem"}
-            margintop={"1rem"}
+             $widthinput="21rem"
+             $margintop="1rem"
+             $widthmobileinput={"17.0625rem"}
             type="text"
             id="name"
             name="name"
             placeholder="Nome"
           ></C.Input>
-          <C.AreaButton>
+          <C.AreaInputs>
             <C.Input
-              widthbutton={"7.8125rem"}
-              margintop={"1rem"}
+               $widthinput="7.8125rem"
+               $margintop="1rem"
               type="text"
               id="birthday"
               name="birthday"
@@ -82,53 +85,58 @@ const SignUp = () => {
               value={date}
             ></C.Input>
             <C.Input
-              widthbutton={"11.5rem"}
-              margintop={"1rem"}
+               $widthinput="11.5rem"
+               $margintop="1rem"
+               $widthmobileinput={"8.5625rem"}
               type="text"
               id="profession"
               name="profession"
               placeholder="Profissão"
             ></C.Input>
-          </C.AreaButton>
-          <C.AreaButton>
+          </C.AreaInputs>
+          <C.AreaInputs>
             <C.Input
-              widthbutton={"7.8125rem"}
-              margintop={"1.31rem"}
+               $widthinput="7.8125rem"
+               $margintop="1.31rem"
               type="text"
               id="country"
               name="country"
               placeholder="País"
             ></C.Input>
             <C.Input
-              widthbutton={"11.5rem"}
-              margintop={"1.31rem"}
+               $widthinput="11.5rem"
+               $margintop="1.31rem"
+               $widthmobileinput={"8.5625rem"}
               type="text"
               id="city"
               name="city"
               placeholder="Cidade"
             ></C.Input>
-          </C.AreaButton>
+          </C.AreaInputs>
 
-          <C.AreaSelect onClick={() => setOptions(!options)}>
-            <C.Select>
-              {selectValue === "" ? "Relacionamento" : selectValue}
-            </C.Select>
-            <C.Arrowimg src={Arrow} alt="caretdown" />
-            {options && (
-              <C.AreaOptions>
-                {Options.map((option, index, Options) => (
-                  <div key={index}>
-                    <C.Option onClick={() => setSelecValue(option.name)}>
-                      {option.name}
-                    </C.Option>
-                    {index !== Options.length - 1 && (
-                      <C.LineOption></C.LineOption>
-                    )}
-                  </div>
-                ))}
-              </C.AreaOptions>
-            )}
-          </C.AreaSelect>
+          <C.FieldSelect>
+            <C.AreaSelect onClick={() => setOptions(!options)}>
+              <C.Select>
+                {selectValue === "" ? "Relacionamento" : selectValue}
+              </C.Select>
+              <C.Arrowimg src={Arrow} alt="caretdown" />
+              {options && (
+                <C.AreaOptions>
+                  {Options.map((option, index, Options) => (
+                    <div key={index}>
+                      <C.Option onClick={() => setSelecValue(option.name)}>
+                        {option.name}
+                      </C.Option>
+                      {index !== Options.length - 1 && (
+                        <C.LineOption></C.LineOption>
+                      )}
+                    </div>
+                  ))}
+                </C.AreaOptions>
+              )}
+            </C.AreaSelect>
+          </C.FieldSelect>
+        
 
           <C.StyledLink to="/">
             <C.Button>Criar conta</C.Button>
