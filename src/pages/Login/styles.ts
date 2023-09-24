@@ -3,16 +3,19 @@ import styled from "styled-components";
 export const Container = styled.div`
   box-sizing: border-box;
   height: calc(100vh - 8.75rem);
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  @media (max-width: 768px) {
+    height: calc(100vh - 5.75rem);
+    align-items: start;
+    margin-top: 1.06rem;
+  }
 `;
 
 export const Card = styled.div`
   width: 24rem;
-
   border-radius: 1rem;
   background-color: #fdfeff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -33,8 +36,8 @@ export const Card = styled.div`
 `;
 
 type InputProps = {
-  widthbutton: string;
-  margintop: string;
+  $widthinput: string;
+  $margintop: string;
 };
 
 export const Title = styled.p`
@@ -44,6 +47,8 @@ export const Title = styled.p`
   margin: 0;
 
   @media (max-width: 768px) {
+    font-size: 1.25rem;
+    font-weight: 800;
     margin-bottom: 2rem;
   }
 `;
@@ -54,8 +59,8 @@ export const Header = styled.span`
 `;
 
 export const Input = styled.input<InputProps>`
-  width: ${(props) => props.widthbutton};
-  margin-top: ${(props) => props.margintop};
+  width: ${(props) => props.$widthinput};
+  margin-top: ${(props) => props.$margintop};
   font-size: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -73,29 +78,33 @@ export const Input = styled.input<InputProps>`
     width: 100%;
     max-width: 17.5625rem;
     padding: 0.56rem 0 0.94rem 1rem;
+    font-size: 0.875rem;
   }
 `;
 
 type ButtonsProps = {
-  background: string;
-  color: string;
+  $background: string;
+  $color: string;
 };
 export const Button = styled.button<ButtonsProps>`
   width: 21rem;
   height: 3.1875rem;
   border-radius: 0.5rem;
-  background: ${(props) => props.background};
+  background: ${(props) => props.$background};
   padding: 0.94rem;
-  align-text: center;
-  color: ${(props) => props.color};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${(props) => props.$color};
   font-size: 1.125rem;
   border: none;
   cursor: pointer;
   margin-top: 1.5rem;
-
   @media (max-width: 768px) {
     max-width: 17.5625rem;
     width: 100%;
+    font-size: 0.875rem;
+    height: 2.3125rem;
   }
 `;
 
@@ -105,7 +114,7 @@ type CheckboxProps = {
 
 export const Text = styled.label`
   color: #868686;
-
+  cursor: pointer;
   font-size: 1rem;
   margin-left: 0.75rem;
 
@@ -118,6 +127,7 @@ export const CheckboxContainer = styled.div`
   align-items: center;
   margin-top: 1.56rem;
   margin: 1.56rem 0 1rem 0;
+  cursor: pointer;
 `;
 
 export const Checkbox = styled.input.attrs({ type: "checkbox" })`
@@ -127,6 +137,7 @@ export const Checkbox = styled.input.attrs({ type: "checkbox" })`
   height: 0.026rem;
   margin: -0.026rem;
   padding: 0;
+  cursor: pointer;
 `;
 export const StyledCheckbox = styled.label<CheckboxProps>`
   width: 1.25rem;
@@ -137,6 +148,7 @@ export const StyledCheckbox = styled.label<CheckboxProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   img {
     display: ${(props) => (props.checked ? "flex" : "none")};
     filter: invert(75%) sepia(11%) saturate(6042%) hue- rotate(30deg)
@@ -149,10 +161,9 @@ export const StyledCheckbox = styled.label<CheckboxProps>`
   }
 `;
 
-export const PasswordForgot = styled.a`
+export const PasswordForgot = styled.p`
   color: #ed6d25;
-
   font-size: 0.875rem;
-  text-decoration-line: underline;
+  text-decoration: none;
   cursor: pointer;
 `;
