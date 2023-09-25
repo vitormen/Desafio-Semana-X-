@@ -13,6 +13,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   @media (max-width: 768px) {
     height: calc(100vh - 5.75rem);
     align-items: start;
@@ -35,7 +36,7 @@ export const Card = styled.div`
   margin-left: 2rem;
   @media (max-width: 768px) {
     max-width: 20rem;
-    height: 36.375rem;
+    height: 37.375rem;
     margin-left: 0;
   }
 `;
@@ -89,13 +90,18 @@ export const AreaInputs = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  position: relative;
+  > div {
+    position: relative;
+    width: 100%;
+  }
 `;
 
 export const AreaSelect = styled.div`
   position: relative;
-  width: 11.3125rem;
-  height: 2.1875rem;
-  margin-top: 0.75rem;
+  width: inherit;
+  height: 2.5rem;
+  margin-top: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
   background: #eff3f8;
@@ -104,7 +110,7 @@ export const AreaSelect = styled.div`
   justify-content: space-between;
   cursor: pointer;
   @media (max-width: 768px) {
-    width: 8.5625rem; 
+    width: inherit; 
     font-size: 0.875rem;
   }
 `;
@@ -142,12 +148,14 @@ export const Button = styled.button`
     font-size: 0.875rem;
     max-width: 17.5625rem;
     height: 2.3125rem;
+    margin-top: 6.81rem;
+    width: 17.5625rem;
   }
 `;
 export const AreaOptions = styled.div`
   margin-top: 0.13rem;
-  padding: 1rem;
-  width: 11.3125rem;
+  padding: 0.3rem;
+  width: inherit;
   border-radius: 0rem 0rem 0.375rem 0.375rem;
   background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -157,7 +165,8 @@ export const AreaOptions = styled.div`
   right: 0;
   font-size: 1rem;
   @media (max-width: 768px) {
-    width: 8.5625rem; 
+    width: inherit;
+    height: 8.375rem; 
     font-size: 0.875rem;
   }
 `;
@@ -181,4 +190,23 @@ export const FieldSelect = styled.div`
   width: 100%;
   display: flex;
   justify-content: end;
+`;
+
+
+export const AlertError = styled.p`
+  position: absolute;
+  font-size: 0.8rem;
+  color: #F00;
+  z-index: 1;
+  margin: 0;
+`;
+
+export const DateFormat = styled.p`
+  color: #ED6D25;
+  font-size: 0.375rem;
+  letter-spacing: 0.0625rem;
+  margin: 0;
+  @media (max-width: 768px){
+    display: none;
+  }
 `;
