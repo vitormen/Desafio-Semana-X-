@@ -15,6 +15,11 @@ export const PageContainer = styled.div`
   box-sizing: border-box;
   padding: 0.22rem;
   height: calc(100vh - 8.75rem);
+  
+  @media (max-width: 768px) {
+    height: calc(100vh - 5.75rem);
+    align-items: start;
+    gap: 0;
 `;
 
 export const NewPasswordMenu = styled.div`
@@ -30,6 +35,12 @@ export const NewPasswordMenu = styled.div`
   color: #868686;
   font-size: 1rem;
   padding: 1rem 1.5rem 1.87rem 1.5rem;
+
+  @media (max-width: 768px) {
+    max-width: 20rem;
+    width: 100%;
+    margin: 1.06rem 1.25rem 8rem;
+  }
 `;
 
 export const MenuHeader = styled.div`
@@ -45,6 +56,11 @@ export const h1 = styled.h1`
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
 `;
 
 export const input = styled.input`
@@ -56,11 +72,19 @@ export const input = styled.input`
   border-radius: 0.5rem;
   background: #EFF3F8;
   border: none;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 17.5625rem;
+    padding: 0.56rem 0 0.94rem 1rem;
+    font-size: 0.875rem;
+  }
+  
   &:focus{
     outline:none;
   }
   &::placeholder{
-    color: #868686;;    
+    color: #868686;;
 `;
 
 export const SaveButton = styled.button`
@@ -78,6 +102,12 @@ export const SaveButton = styled.button`
   font-size: 1.125rem;
   font-weight: 400;
   line-height: normal;
+
+  @media (max-width: 768px) {
+    width: 17.5625rem;
+    height: 2.3125rem;
+    font-size: 0.875rem;
+  }
 `;
 
 export const ClickText = styled.div`
@@ -90,6 +120,10 @@ export const ClickText = styled.div`
   margin-top: 3.37rem;
   display: flex;
   align-self: center;
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+  }
 `;
 
 export const AlternativeButton = styled.button`
@@ -107,4 +141,10 @@ export const AlternativeButton = styled.button`
   line-height: normal;
   cursor: pointer;
   margin-top: 0.94rem;
+
+  @media (max-width: 768px) {
+    width: 17.5625rem;
+    height: 2.3125rem;
+    font-size: 0.875rem;
+  }
 `;
