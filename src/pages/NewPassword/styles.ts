@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
+  align-self: center;
 `;
 
 export const PageContainer = styled.div`
@@ -20,6 +21,8 @@ export const PageContainer = styled.div`
     height: calc(100vh - 5.75rem);
     align-items: start;
     gap: 0;
+    padding: 0;
+    
 `;
 
 export const NewPasswordMenu = styled.div`
@@ -38,6 +41,7 @@ export const NewPasswordMenu = styled.div`
 
   @media (max-width: 768px) {
     max-width: 20rem;
+    height: 36.375rem;
     width: 100%;
     margin: 1.06rem 1.25rem 8rem;
   }
@@ -64,8 +68,8 @@ export const h1 = styled.h1`
 `;
 
 export const input = styled.input`
-  margin-top: ${(props) => props.marginTop};
-  width: 21rem;
+  margin-top: ${(props) => props.$marginTop};
+  width: ${(props) => props.$widthinput};
   height: 3.1875rem;
   font-size: 1rem;
   padding: 1rem;

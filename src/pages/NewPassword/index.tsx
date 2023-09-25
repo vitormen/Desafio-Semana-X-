@@ -24,21 +24,24 @@ const NewPassword = () => {
           </C.MenuHeader>
 
           <C.input
-            marginTop={"2.25rem"}
+            $marginTop={"2.25rem"}
+            $widthinput={"21rem"}
             type="text"
             id="code"
             name="code"
             placeholder="Informe o código"
           ></C.input>
           <C.input
-            marginTop={"1.12rem"}
+            $marginTop={"1.12rem"}
+            $widthinput={"21rem"}
             type="password"
             id="password"
             name="password"
             placeholder="Nova Senha"
           ></C.input>
           <C.input
-            marginTop={"1.12rem"}
+            $marginTop={"1.12rem"}
+            $widthinput={"21rem"}
             type="password"
             id="password-confirm"
             name="password-confirm"
@@ -49,10 +52,9 @@ const NewPassword = () => {
             <C.SaveButton>Salvar</C.SaveButton>
           </C.StyledLink>
 
-          {/*Vai ser necessario mudar isso no futuro para que se torne algo clicavel, pois no momento se trata somente de uma TAG <P></P>*/}
-          <C.ClickText>
-            <p>Lembrou sua Senha?</p>
-          </C.ClickText>
+          <C.StyledLink to="/">
+            <C.ClickText > <p>Lembrou sua Senha? </p> </C.ClickText>
+          </C.StyledLink>
 
           <C.AlternativeButton>Entrar com as credenciais</C.AlternativeButton>
         </C.NewPasswordMenu>
