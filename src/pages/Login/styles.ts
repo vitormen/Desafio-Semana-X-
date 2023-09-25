@@ -17,17 +17,16 @@ export const Container = styled.div`
 
 export const Card = styled.div`
   width: 24rem;
+  height: 37.375rem;
   border-radius: 1rem;
   background-color: #fdfeff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   color: #868686;
-
   font-size: 1rem;
   padding: 1rem 1.5rem 1.87rem 1.5rem;
   margin-left: 2rem;
-  margin-top: 1rem;
 
   @media (max-width: 768px) {
     max-width: 20rem;
