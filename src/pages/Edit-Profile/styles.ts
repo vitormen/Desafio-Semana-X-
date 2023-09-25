@@ -2,10 +2,14 @@ import styled from "styled-components";
 
 export const DivCenter = styled.div`
   box-sizing: border-box;
-  padding: 0 22rem;
-  margin-top: 5rem;
+  margin: 5.5rem 22rem 0 22rem;
   display: flex;
   align-items: flex-start;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 export const LeftProfile = styled.div`
@@ -13,10 +17,13 @@ export const LeftProfile = styled.div`
   height: 20.3125rem;
   border-radius: 1rem;
   background: #fdfeff;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const divImg = styled.div`
@@ -41,7 +48,6 @@ export const UserImage = styled.img`
 
 export const name = styled.p`
   color: #4b4b4b;
-
   font-size: 1.5rem;
   margin-bottom: 0rem;
   margin-top: 1.19rem;
@@ -54,7 +60,7 @@ export const EditsAndLeftProfile = styled.div`
 
 export const CenterProfile = styled.div`
   width: 37rem;
-  // height: 53.375rem;
+  //height: 53.375rem;
   border-radius: 1rem;
   background: #fdfeff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -63,11 +69,28 @@ export const CenterProfile = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem 3.69rem 6.44rem 2.88rem;
+
+  @media (max-width: 768px) {
+    width: 20rem;
+    padding: 0.62rem 0rem 0rem 0rem;
+  }
+`;
+export const logo = styled.img`
+  &.hide-on-descktop {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
 `;
 
 export const DivButton = styled.div`
   display: flex;
   margin-bottom: 6.61rem;
+  @media (max-width: 768px) {
+    align-items: end;
+    margin-bottom: 4.3rem;
+  }
 `;
 
 export const title = styled.h1`
@@ -76,8 +99,17 @@ export const title = styled.h1`
   font-size: 2.25rem;
   letter-spacing: 0.1875rem;
   text-align: center;
-  margin-top: 2rem;
   margin: 2rem 0 5.75rem 0;
+
+  @media (max-width: 768px) {
+    color: #ed6d25;
+    font-family: Roboto Flex;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 0.5rem 0 2.19rem 0;
+  }
 `;
 type InputProps = {
   widthButton: string;
@@ -88,6 +120,9 @@ type InputProps = {
 export const DivInpuSelect = styled.div`
   display: flex;
   gap: 6.63rem;
+  @media (max-width: 768px) {
+    gap: 0rem;
+  }
 `;
 
 export const divSelect = styled.div`
@@ -97,7 +132,6 @@ export const divSelect = styled.div`
 export const AreaSelect = styled.div`
   position: relative;
   width: 11.3125rem;
-  height: 2.1875rem;
   padding: 1rem;
   border-radius: 0.5rem;
   background: #eff3f8;
@@ -105,10 +139,28 @@ export const AreaSelect = styled.div`
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  @media (max-width: 768px) {
+    padding: 0.56rem 0.56rem 0.94rem 1rem;
+    margin-top: 0.94rem;
+    width: 17.3125rem;
+  }
+  &.hide-on-mobile {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  &.show-on-mobile {
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
 `;
 export const Select = styled.span`
   color: #868686;
   font-size: 1rem;
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+  }
 `;
 export const Arrowimg = styled.img`
   width: 1.3125rem;
@@ -139,6 +191,9 @@ export const AreaOptions = styled.div`
   top: 100%;
   right: 0;
   font-size: 0.875rem;
+  @media (max-width: 768px) {
+    width: inherit;
+  }
 `;
 export const Option = styled.p`
   color: #8d8d8d;
@@ -160,23 +215,38 @@ export const LineOption = styled.div`
 export const divInput = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 export const Input = styled.input<InputProps>`
   width: ${(props) => props.widthButton};
   margin-top: ${(props) => props.marginTop};
   display: flex;
   flex-direction: column;
-  height: 3.1875rem;
   font-size: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
   background: #eff3f8;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:focus {
     outline: none;
   }
   &::placeholder {
     color: #868686;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 17.5625rem;
+    width: 100%;
+    padding: 0.56rem 0rem 0.94rem 1rem;
+    font-size: 0.875rem;
+  }
+  &.on-mobile {
+    @media (max-width: 768px) {
+      width: 8.5625rem;
+    }
   }
 `;
 
@@ -190,5 +260,23 @@ export const Button1 = styled.button`
   border: none;
   cursor: pointer;
   margin-top: 2.19rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 17.5625rem;
+    height: 2.3125rem;
+    font-size: 0.875rem;
+    margin-top: 10.75rem;
+  }
 `;
-//
+
+export const DivMobile = styled.div`
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.38rem;
+    justify-content: center;
+  }
+`;
