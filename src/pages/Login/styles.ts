@@ -7,6 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
   @media (max-width: 768px) {
     height: calc(100vh - 5.75rem);
     align-items: start;
@@ -66,7 +67,6 @@ export const Input = styled.input<InputProps>`
   border-radius: 0.5rem;
   background: #eff3f8;
   border: none;
-
   &:focus {
     outline: none;
   }
@@ -167,3 +167,13 @@ export const PasswordForgot = styled.p`
   text-decoration: none;
   cursor: pointer;
 `;
+
+
+
+export const AlertError = styled.p`
+  position: absolute;
+  font-size: 0.8rem;
+  color: #F00;
+  z-index: 1;
+  margin: 0;
+`
