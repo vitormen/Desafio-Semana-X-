@@ -27,7 +27,6 @@ export const PageContainer = styled.div`
 
 export const NewPasswordMenu = styled.div`
   width: 24rem;
-  height: 37.375rem;
   display: flex;
   flex-shrink: 0;
   border-radius: 1rem;
@@ -41,7 +40,6 @@ export const NewPasswordMenu = styled.div`
 
   @media (max-width: 768px) {
     max-width: 20rem;
-    height: 36.375rem;
     width: 100%;
     margin: 1.06rem 1.25rem 8rem;
   }
