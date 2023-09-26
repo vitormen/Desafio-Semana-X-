@@ -123,10 +123,10 @@ export const title = styled.h1`
     margin: 0.5rem 0 2.19rem 0;
   }
 `;
-type InputProps = {
-  widthButton: string;
-  marginTop: string;
-  imgInput?: string;
+type inputprops = {
+  $widthinput: string;
+  $margintop: string;
+  $imgInput?: string;
 };
 
 export const DivInpuSelect = styled.div`
@@ -229,9 +229,9 @@ export const divInput = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-export const Input = styled.input<InputProps>`
-  width: ${(props) => props.widthButton};
-  margin-top: ${(props) => props.marginTop};
+export const Input = styled.input<inputprops>`
+  width: ${(props) => props.$widthinput};
+  margin-top: ${(props) => props.$margintop};
   display: flex;
   flex-direction: column;
   font-size: 1rem;

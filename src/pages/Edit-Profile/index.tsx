@@ -98,11 +98,11 @@ const Profile = () => {
           <C.DivInpuSelect>
             <C.divInput>
               <C.Input
-                widthButton={"13.4375rem"}
-                marginTop={"0rem"}
+                $widthinput={"13.4375rem"}
+                $margintop={"0rem"}
                 type="text"
-                id="Name"
-                name="Name"
+                id="Profession"
+                name="Profession"
                 placeholder="Profissão"
                 value={job}
                 onChange={(e) => setJob(e.target.value)}
@@ -136,8 +136,8 @@ const Profile = () => {
               </C.AreaSelect>
 
               <C.Input
-                widthButton={"13.4375rem"}
-                marginTop={"1.19rem"}
+                $widthinput={"13.4375rem"}
+                $margintop={"1.19rem"}
                 type="text"
                 id="Name"
                 name="Name"
@@ -146,8 +146,8 @@ const Profile = () => {
                 onChange={(e) => setName(e.target.value)}
               ></C.Input>
               <C.Input
-                widthButton={"13.4375rem"}
-                marginTop={"1.25rem"}
+                $widthinput={"13.4375rem"}
+                $margintop={"1.25rem"}
                 type="text"
                 id="City"
                 name="City"
@@ -157,8 +157,8 @@ const Profile = () => {
               ></C.Input>
               <C.DivMobile>
                 <C.Input
-                  widthButton={"7.8125rem"}
-                  marginTop={"1.5rem"}
+                  $widthinput={"7.8125rem"}
+                  $margintop={"1.5rem"}
                   type="text"
                   id="Country"
                   name="Country"
@@ -169,8 +169,8 @@ const Profile = () => {
                 ></C.Input>
 
                 <C.Input
-                  widthButton={"7.8125rem"}
-                  marginTop={"1.5rem"}
+                  $widthinput={"7.8125rem"}
+                  $margintop={"1.5rem"}
                   id="Date"
                   name="Date"
                   placeholder="DD/MM/AAA"
@@ -180,8 +180,8 @@ const Profile = () => {
                 ></C.Input>
 
                 <C.Input
-                  widthButton={"13.8125rem"}
-                  marginTop={"1.5rem"}
+                  $widthinput={"13.8125rem"}
+                  $margintop={"1.5rem"}
                   type="password"
                   id="password"
                   name="password"
@@ -192,11 +192,11 @@ const Profile = () => {
                 ></C.Input>
 
                 <C.Input
-                  widthButton={"13.8125rem"}
-                  marginTop={"1.5rem"}
+                  $widthinput={"13.8125rem"}
+                  $margintop={"1.5rem"}
                   type="password"
-                  id="password"
-                  name="password"
+                  id="repeatPassword"
+                  name="repeatPassword"
                   placeholder="Repetir senha"
                   className="on-mobile"
                   value={password}
