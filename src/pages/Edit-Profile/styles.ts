@@ -44,7 +44,7 @@ export const divImg = styled.div`
   border: 3px solid #ed6d25;
   margin-top: 4.44rem;
   border-radius: 6.25rem;
-
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,10 +123,10 @@ export const title = styled.h1`
     margin: 0.5rem 0 2.19rem 0;
   }
 `;
-type InputProps = {
-  widthButton: string;
-  marginTop: string;
-  imgInput?: string;
+type inputprops = {
+  $widthinput: string;
+  $margintop: string;
+  $imgInput?: string;
 };
 
 export const DivInpuSelect = styled.div`
@@ -229,9 +229,9 @@ export const divInput = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-export const Input = styled.input<InputProps>`
-  width: ${(props) => props.widthButton};
-  margin-top: ${(props) => props.marginTop};
+export const Input = styled.input<inputprops>`
+  width: ${(props) => props.$widthinput};
+  margin-top: ${(props) => props.$margintop};
   display: flex;
   flex-direction: column;
   font-size: 1rem;
@@ -291,3 +291,19 @@ export const DivMobile = styled.div`
     justify-content: center;
   }
 `;
+
+export const ModeEdit = styled.div`
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  border: 0.188rem solid #ED6D25;
+  bottom: 0;
+  left: 0;
+  width: 2.625rem;
+  height: 2.6875rem;
+  border-radius: 100%;
+  background-color: #FDFEFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
