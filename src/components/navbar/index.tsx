@@ -29,7 +29,7 @@ const Navbar: React.FC<INavbarProps> = ({
           {!thereIsProfile && !thereIsUserEdit ? (
             " "
           ) : (
-            <C.MenuOptions>
+            <C.MenuOptions className="hide-on-mobile">
               <C.StyledNavLink to="/">
                 <C.Option color={handleOptionColor(false)}>Início</C.Option>
               </C.StyledNavLink>
@@ -47,7 +47,7 @@ const Navbar: React.FC<INavbarProps> = ({
           {!thereIsProfile ? (
             " "
           ) : (
-            <C.Search>
+            <C.Search className="hide-on-mobile">
               <C.ImageSearch src={Search} alt="search"></C.ImageSearch>
               <C.SearchInput
                 type="text"
@@ -62,8 +62,12 @@ const Navbar: React.FC<INavbarProps> = ({
           ) : (
             <C.User>
               <C.UserImage src={UserImage}></C.UserImage>
-              <p>Gabriel Barbosa</p>
-              <img src={CaretDown} alt="carretDown" />
+              <p className="hide-on-mobile">Gabriel Barbosa</p>
+              <img
+                src={CaretDown}
+                alt="carretDown"
+                className="hide-on-mobile"
+              />
             </C.User>
           )}
           {!thereIsLoggedOut ? " " : <C.Link>Centro de segurança</C.Link>}

@@ -12,6 +12,12 @@ export const Nav = styled.div`
   overflow: hidden;
   justify-content: center;
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+    height: 3.75rem;
+  }
 `;
 
 export const MenuLeft = styled.div`
@@ -26,6 +32,10 @@ export const LogoText = styled.h1`
   color: #ed6d25;
   font-size: 2.25rem;
   font-weight: 800;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
 `;
 
 export const Link = styled.p`
@@ -39,6 +49,12 @@ export const MenuOptions = styled.div`
     display: flex;
     width: 21.1rem
     margin-left: 2.13rem;
+
+    &.hide-on-mobile {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 `;
 
 type OptionProps = {
@@ -64,10 +80,23 @@ export const Search = styled.div`
   display: flex;
   align-items: center;
   color: #b4aeae;
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+
+  &.hide-on-mobile {
+    @media (max-width: 768px) {
+      display: none;
+    }
 `;
 export const ImageSearch = styled.img`
   width: 1.5rem;
   height: 1.49863rem;
+  @media (max-width: 768px) {
+    width: 1rem;
+    height: 0.99906rem;
+  }
 `;
 export const SearchInput = styled.input`
   width: 100%;
@@ -90,7 +119,14 @@ export const User = styled.div`
   margin-left: 0.87rem;
   p {
     margin-right: 0.25rem;
+
+    &.hide-on-mobile {
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
+
+    
 `;
 
 export const UserImage = styled.img`
@@ -98,4 +134,9 @@ export const UserImage = styled.img`
   height: 2rem;
   border-radius: 6.25rem;
   margin-right: 0.81rem;
+  @media (max-width: 768px) {
+    margin: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 `;
