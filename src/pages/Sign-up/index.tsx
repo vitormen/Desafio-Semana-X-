@@ -5,75 +5,143 @@ import Banner from "../../components/homepageImg";
 import Arrow from "../../assets/CaretDown.png";
 import * as C from "./styles";
 import useInput from "../../hooks/use-input";
-import { parse, isValid} from 'date-fns';
-import { ptBR } from 'date-fns/locale';
+import { parse, isValid } from "date-fns";
+import { ptBR } from "date-fns/locale";
 import { useState } from "react";
 
+import { useSaveData } from "../../hooks/use-saveDate";
 
 const SignUp = () => {
+  const { data, setData, saveData } = useSaveData(
+    "http://localhost:3000/informations"
+  );
+
+  const emailInputChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setData({ ...data, email: event.target.value });
+  };
+
+  const combinedEmailChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    emailChangeHandler(event);
+    emailInputChangeHandler(event);
+  };
+
+  const combinedPasswordChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    passwordChangeHandler(event);
+    setData({ ...data, password: event.target.value });
+  };
+
+  const combinedNameChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    nameChangeHandler(event);
+    setData({ ...data, name: event.target.value });
+  };
+
+  const combinedBirthChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    birthdayChangeHandler(event);
+    setData({ ...data, birth: event.target.value });
+  };
+
+  const combinedJobChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    professionChangeHandler(event);
+    setData({ ...data, job: event.target.value });
+  };
+
+  const combinedCountryChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    countryChangeHandler(event);
+    setData({ ...data, country: event.target.value });
+  };
+
+  const combinedCityChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    cityChangeHandler(event);
+    setData({ ...data, city: event.target.value });
+  };
+
+  const combinedRelationshipChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setData({ ...data, selectField: event.target.value });
+  };
+
   const [selectValue, setSelecValue] = useState<string>("");
   const [options, setOptions] = useState<Boolean>(false);
-  
+
   const {
-    value: enteredEmail, 
+    value: enteredEmail,
     isValid: enteredEmailIsValid,
-    hasError: emailInputHasError, 
-    valueChangeHandler: emailChangeHandler, 
+    hasError: emailInputHasError,
+    valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
-    reset: emailReset
-    } = useInput(value => /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(value));
+    reset: emailReset,
+  } = useInput((value) =>
+    /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(value)
+  );
   const {
-    value: enteredPassword, 
+    value: enteredPassword,
     isValid: enteredPasswordIsValid,
-    hasError: passwordInputHasError, 
-    valueChangeHandler: passwordChangeHandler, 
+    hasError: passwordInputHasError,
+    valueChangeHandler: passwordChangeHandler,
     inputBlurHandler: passwordBlurHandler,
-    reset: passwordReset
-  } = useInput(value => value.trim() !== '');
+    reset: passwordReset,
+  } = useInput((value) => value.trim() !== "");
   const {
-    value: enteredName, 
+    value: enteredName,
     isValid: enteredNameIsValid,
-    hasError: nameInputHasError, 
-    valueChangeHandler: nameChangeHandler, 
+    hasError: nameInputHasError,
+    valueChangeHandler: nameChangeHandler,
     inputBlurHandler: nameBlurHandler,
-    reset: nameReset
-  } = useInput(value => value.trim() !== '');
+    reset: nameReset,
+  } = useInput((value) => value.trim() !== "");
   const {
     value: enteredBirthday,
     isValid: enteredBirthdayIsValid,
     hasError: birthdayInputHasError,
     valueChangeHandler: birthdayChangeHandler,
     inputBlurHandler: birthdayBlurHandler,
-    reset: birthdayReset
+    reset: birthdayReset,
   } = useInput((value) => {
-    const selectedDate = parse(value, 'P', new Date(), { locale: ptBR });
+    const selectedDate = parse(value, "P", new Date(), { locale: ptBR });
     const currentDate = new Date();
     return isValid(selectedDate) && selectedDate < currentDate;
   });
   const {
-    value: enteredProfession, 
+    value: enteredProfession,
     isValid: enteredProfessionIsValid,
-    hasError: professionInputHasError, 
-    valueChangeHandler: professionChangeHandler, 
+    hasError: professionInputHasError,
+    valueChangeHandler: professionChangeHandler,
     inputBlurHandler: professionBlurHandler,
-    reset: professionReset
-  } = useInput(value => value.trim() !== '');
+    reset: professionReset,
+  } = useInput((value) => value.trim() !== "");
   const {
-    value: enteredCountry, 
+    value: enteredCountry,
     isValid: enteredCountryIsValid,
-    hasError: countryInputHasError, 
-    valueChangeHandler: countryChangeHandler, 
+    hasError: countryInputHasError,
+    valueChangeHandler: countryChangeHandler,
     inputBlurHandler: countryBlurHandler,
-    reset: countryReset
-  } = useInput(value => value.trim() !== '');
+    reset: countryReset,
+  } = useInput((value) => value.trim() !== "");
   const {
-    value: enteredCity, 
+    value: enteredCity,
     isValid: enteredCityIsValid,
-    hasError: cityInputHasError, 
-    valueChangeHandler: cityChangeHandler, 
+    hasError: cityInputHasError,
+    valueChangeHandler: cityChangeHandler,
     inputBlurHandler: cityBlurHandler,
-    reset: cityReset
-  } = useInput(value => value.trim() !== '');
+    reset: cityReset,
+  } = useInput((value) => value.trim() !== "");
 
   const Options = [
     { _id: "1", name: "Solteiro" },
@@ -83,23 +151,32 @@ const SignUp = () => {
     { _id: "5", name: "Preocupado" },
   ];
 
-  let formIsValid = false
-  if(enteredNameIsValid && enteredEmailIsValid
-    && enteredPasswordIsValid && enteredBirthdayIsValid
-    && enteredProfessionIsValid && enteredCountryIsValid
-    && enteredCityIsValid){
+  let formIsValid = false;
+  if (
+    enteredNameIsValid &&
+    enteredEmailIsValid &&
+    enteredPasswordIsValid &&
+    enteredBirthdayIsValid &&
+    enteredProfessionIsValid &&
+    enteredCountryIsValid &&
+    enteredCityIsValid
+  ) {
     formIsValid = true;
   }
 
-  
   const formSubmissionHandler = () => {
-    emailReset()
-    passwordReset()
-    nameReset()
-    birthdayReset()
-    professionReset()
-    countryReset()
-    cityReset()
+    emailReset();
+    passwordReset();
+    nameReset();
+    birthdayReset();
+    professionReset();
+    countryReset();
+    cityReset();
+  };
+
+  const combinedFormSubmissionHandler = () => {
+    formSubmissionHandler();
+    saveData();
   };
 
   return (
@@ -121,7 +198,7 @@ const SignUp = () => {
               $widthinput={"21rem"}
               $margintop={"0.69rem"}
               $widthmobileinput={"17rem"}
-              onChange={emailChangeHandler}
+              onChange={combinedEmailChangeHandler}
               onBlur={emailBlurHandler}
               value={enteredEmail}
               type="email"
@@ -129,9 +206,7 @@ const SignUp = () => {
               name="email"
               placeholder="E-mail"
             ></C.Input>
-            {emailInputHasError && (
-                <C.AlertError>Email inválido</C.AlertError>
-              )}
+            {emailInputHasError && <C.AlertError>Email inválido</C.AlertError>}
             <C.Input
               $widthinput={"21rem"}
               $margintop={"1.5rem"}
@@ -140,13 +215,13 @@ const SignUp = () => {
               id="password"
               name="password"
               placeholder="Senha"
-              onChange={passwordChangeHandler}
+              onChange={combinedPasswordChangeHandler}
               onBlur={passwordBlurHandler}
               value={enteredPassword}
             ></C.Input>
             {passwordInputHasError && (
-                <C.AlertError>Senha inválido</C.AlertError>
-              )}
+              <C.AlertError>Senha inválido</C.AlertError>
+            )}
             <C.Input
               $widthinput={"21rem"}
               $margintop={"1rem"}
@@ -155,13 +230,11 @@ const SignUp = () => {
               id="name"
               name="name"
               placeholder="Nome"
-              onChange={nameChangeHandler}
+              onChange={combinedNameChangeHandler}
               onBlur={nameBlurHandler}
               value={enteredName}
             ></C.Input>
-            {nameInputHasError && (
-                <C.AlertError>Nome inválido</C.AlertError>
-              )}
+            {nameInputHasError && <C.AlertError>Nome inválido</C.AlertError>}
             <C.AreaInputs>
               <div>
                 <C.Input
@@ -172,14 +245,15 @@ const SignUp = () => {
                   id="birthday"
                   name="birthday"
                   placeholder="Nascimento"
-                  onChange={birthdayChangeHandler}
+                  onChange={combinedBirthChangeHandler}
                   onBlur={birthdayBlurHandler}
                   value={enteredBirthday}
                 ></C.Input>
-                {birthdayInputHasError? (
-                <C.AlertError>Nascimento inválido</C.AlertError>
-              ): <C.DateFormat>DDD/MM/AAAA</C.DateFormat>}
-                
+                {birthdayInputHasError ? (
+                  <C.AlertError>Nascimento inválido</C.AlertError>
+                ) : (
+                  <C.DateFormat>DDD/MM/AAAA</C.DateFormat>
+                )}
               </div>
               <div>
                 <C.Input
@@ -190,7 +264,7 @@ const SignUp = () => {
                   id="profession"
                   name="profession"
                   placeholder="Profissão"
-                  onChange={professionChangeHandler}
+                  onChange={combinedJobChangeHandler}
                   onBlur={professionBlurHandler}
                   value={enteredProfession}
                 ></C.Input>
@@ -209,7 +283,7 @@ const SignUp = () => {
                   id="country"
                   name="country"
                   placeholder="País"
-                  onChange={countryChangeHandler}
+                  onChange={combinedCountryChangeHandler}
                   onBlur={countryBlurHandler}
                   value={enteredCountry}
                 ></C.Input>
@@ -226,7 +300,7 @@ const SignUp = () => {
                   id="city"
                   name="city"
                   placeholder="Cidade"
-                  onChange={cityChangeHandler}
+                  onChange={combinedCityChangeHandler}
                   onBlur={cityBlurHandler}
                   value={enteredCity}
                 ></C.Input>
@@ -237,19 +311,24 @@ const SignUp = () => {
             </C.AreaInputs>
             <C.FieldSelect>
               <C.AreaSelect onClick={() => setOptions(!options)}>
-                <C.Select               
-                onChange={professionChangeHandler}
-                onBlur={professionBlurHandler}
-              >
+                <C.Select
+                  onChange={professionChangeHandler}
+                  onBlur={professionBlurHandler}
+                >
                   {selectValue === "" ? "Relacionamento" : selectValue}
                 </C.Select>
                 <C.Arrowimg src={Arrow} alt="caretdown" />
-                
+
                 {options && (
                   <C.AreaOptions>
                     {Options.map((option, index, Options) => (
                       <div key={index}>
-                        <C.Option onClick={() => setSelecValue(option.name)}>
+                        <C.Option
+                          onClick={() => {
+                            setSelecValue(option.name);
+                            setData({ ...data, selectField: option._id });
+                          }}
+                        >
                           {option.name}
                         </C.Option>
                         {index !== Options.length - 1 && (
@@ -257,15 +336,14 @@ const SignUp = () => {
                         )}
                       </div>
                     ))}
-                    
-                  </C.AreaOptions> 
+                  </C.AreaOptions>
                 )}
-                
               </C.AreaSelect>
-              
             </C.FieldSelect>
-            <C.StyledLink  to={formIsValid? "/profile": '/signup'}>
-              <C.Button onClick={formSubmissionHandler}>Criar conta</C.Button>
+            <C.StyledLink to={formIsValid ? "/profile" : "/signup"}>
+              <C.Button onClick={combinedFormSubmissionHandler}>
+                Criar conta
+              </C.Button>
             </C.StyledLink>
           </div>
         </C.Card>

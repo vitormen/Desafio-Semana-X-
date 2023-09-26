@@ -144,7 +144,7 @@ export const divSelect = styled.div`
 export const AreaSelect = styled.div`
   position: relative;
   width: 11.3125rem;
-  padding: 1rem;
+  padding: 0.44rem 0rem 0.56rem 0.56rem;
   border-radius: 0.5rem;
   background: #eff3f8;
   display: flex;
