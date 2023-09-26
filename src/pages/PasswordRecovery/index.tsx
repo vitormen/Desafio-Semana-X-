@@ -33,10 +33,9 @@ const PasswordRecovery = () => {
             <C.SendButton>Enviar Código</C.SendButton>
           </C.StyledLink>
 
-          {/*Vai ser necessario mudar isso no futuro para que se torne algo clicavel, pois no momento se trata somente de uma TAG <P></P>*/}
-          <C.ClickText>
-            <p>Lembrou sua Senha?</p>
-          </C.ClickText>
+          <C.StyledLink to="/">
+            <C.ClickText > <p>Lembrou sua Senha? </p> </C.ClickText>
+          </C.StyledLink>
 
           <C.AlternativeButton>Entrar com as credenciais</C.AlternativeButton>
         </C.RecoveryMenu>
