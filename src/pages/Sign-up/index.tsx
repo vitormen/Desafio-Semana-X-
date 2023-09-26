@@ -77,9 +77,18 @@ const SignUp = () => {
     setData({ ...data, selectField: event.target.value });
   };
 
+  //select input states and values
   const [selectValue, setSelecValue] = useState<string>("");
   const [options, setOptions] = useState<Boolean>(false);
+  const Options = [
+    { _id: "1", name: "Solteiro" },
+    { _id: "2", name: "Casado" },
+    { _id: "3", name: "Divorciado" },
+    { _id: "4", name: "Namorando" },
+    { _id: "5", name: "Preocupado" },
+  ];
 
+//form validation with custom hooks
   const {
     value: enteredEmail,
     isValid: enteredEmailIsValid,
@@ -143,14 +152,7 @@ const SignUp = () => {
     reset: cityReset,
   } = useInput((value) => value.trim() !== "");
 
-  const Options = [
-    { _id: "1", name: "Solteiro" },
-    { _id: "2", name: "Casado" },
-    { _id: "3", name: "Divorciado" },
-    { _id: "4", name: "Namorando" },
-    { _id: "5", name: "Preocupado" },
-  ];
-
+//check if the form is valid
   let formIsValid = false;
   if (
     enteredNameIsValid &&
@@ -163,7 +165,7 @@ const SignUp = () => {
   ) {
     formIsValid = true;
   }
-
+//function to reset if the form is valid
   const formSubmissionHandler = () => {
     emailReset();
     passwordReset();
