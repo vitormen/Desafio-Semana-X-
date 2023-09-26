@@ -44,7 +44,7 @@ export const divImg = styled.div`
   border: 3px solid #ed6d25;
   margin-top: 4.44rem;
   border-radius: 6.25rem;
-
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -291,3 +291,19 @@ export const DivMobile = styled.div`
     justify-content: center;
   }
 `;
+
+export const ModeEdit = styled.div`
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  border: 0.188rem solid #ED6D25;
+  bottom: 0;
+  left: 0;
+  width: 2.625rem;
+  height: 2.6875rem;
+  border-radius: 100%;
+  background-color: #FDFEFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`

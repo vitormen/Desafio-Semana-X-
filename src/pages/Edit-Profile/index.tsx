@@ -4,6 +4,7 @@ import * as C from "./styles";
 import Arrow from "../../assets/CaretDown.png";
 import { useState, useEffect } from "react";
 import Logo from "../../assets/ps_orkut.png";
+import Mode_edit from '../../assets/Mode_edit.png'
 import { set } from "date-fns";
 
 const Profile = () => {
@@ -87,6 +88,7 @@ const Profile = () => {
           <C.LeftProfile>
             <C.divImg>
               <C.UserImage src={UserImage}></C.UserImage>
+              <C.ModeEdit><img src={Mode_edit}></img></C.ModeEdit>
             </C.divImg>
           </C.LeftProfile>
         </C.EditsAndLeftProfile>
