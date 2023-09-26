@@ -159,7 +159,9 @@ const Profile = () => {
           </C.DivInpuSelect>
 
           <C.DivButton>
-            <C.Button1>Salvar</C.Button1>
+            <C.StyledLink to="/profile">
+              <C.Button1>Salvar</C.Button1>
+            </C.StyledLink>
           </C.DivButton>
         </C.CenterProfile>
       </C.DivCenter>

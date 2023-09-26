@@ -1,12 +1,23 @@
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
 export const DivCenter = styled.div`
   box-sizing: border-box;
-  margin: 5.5rem 22rem 0 22rem;
+  // margin: 5.5rem 22rem 0 22rem;
   display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+  padding-bottom: 5rem;
+  margin-top: 5rem;
 
   @media (max-width: 768px) {
+    margin: 0;
     align-items: center;
     flex-direction: column;
   }
@@ -64,16 +75,17 @@ export const CenterProfile = styled.div`
   border-radius: 1rem;
   background: #fdfeff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  margin: 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 3.69rem 6.44rem 2.88rem;
+  // padding: 2rem 3.69rem 6.44rem 2.88rem;
 
   @media (max-width: 768px) {
     width: 20rem;
     padding: 0.62rem 0rem 0rem 0rem;
+    width: 100%;
+    max-width: 20rem;
   }
 `;
 export const logo = styled.img`
@@ -119,15 +131,15 @@ type InputProps = {
 
 export const DivInpuSelect = styled.div`
   display: flex;
-  gap: 6.63rem;
-  @media (max-width: 768px) {
-    gap: 0rem;
-  }
 `;
 
 export const divSelect = styled.div`
   display: flex;
   flex-direction: column;
+  margin-left: 6.63rem;
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 `;
 export const AreaSelect = styled.div`
   position: relative;
@@ -268,7 +280,6 @@ export const Button1 = styled.button`
     width: 17.5625rem;
     height: 2.3125rem;
     font-size: 0.875rem;
-    margin-top: 10.75rem;
   }
 `;
 
