@@ -3,6 +3,8 @@ import Search from "../../assets/Search.png";
 import CaretDown from "../../assets/CaretDown.png";
 import UserImage from "../../assets/User.png";
 
+
+//viewing conditions for each page type props
 interface INavbarProps {
   thereIsLoggedOut: boolean;
   thereIsProfile: boolean;
@@ -14,7 +16,7 @@ const Navbar: React.FC<INavbarProps> = ({
   thereIsProfile,
   thereIsUserEdit,
 }): JSX.Element => {
-  const handleOptionColor = (value: boolean) => {
+  const handleOptionColor = (value: boolean) => { //selected page color
     return value ? "#ED6D25" : "#4B4B4B";
   };
 

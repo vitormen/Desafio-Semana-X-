@@ -7,6 +7,8 @@ const useInput = (validateValue: Validation) => {
     const [isTouched, setIsTouched] = useState<boolean>(false);
 
     const valueIsValid = validateValue(enteredValue);
+
+    //Indicates whether there is an error in data entry
     const hasError = !valueIsValid && isTouched;
 
     const valueChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -16,6 +18,8 @@ const useInput = (validateValue: Validation) => {
         setIsTouched(true);
     }
 
+
+    //function that allows you to reset the state
     const reset = () => {
         setIsTouched(true)
     }
