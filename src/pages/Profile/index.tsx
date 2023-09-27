@@ -1,5 +1,6 @@
 import Navbar from "../../components/navbar";
 import UserImage from "../../assets/User.png";
+import Search from "../../assets/Search.png";
 
 import Fernando from "../../assets/Fernando.png";
 import Ana from "../../assets/Ana.png";
@@ -31,7 +32,17 @@ const Profile = () => {
         thereIsProfile={true}
         thereIsUserEdit={true}
       />
+
       <C.DivCenter>
+        <C.Search className="hide-on-mobile">
+          <C.ImageSearch src={Search} alt="search"></C.ImageSearch>
+          <C.SearchInput
+            type="text"
+            id="search"
+            name="search"
+            placeholder="Pesquisar no UOLkut"
+          ></C.SearchInput>
+        </C.Search>
         <C.EditsAndLeftProfile>
           <C.LeftProfile>
             <C.divImg>
@@ -50,11 +61,10 @@ const Profile = () => {
 
         <C.CenterProfile>
           <C.FirstPhrase>Boa Tarde, Gabriel Barbosa</C.FirstPhrase>
-          <C.DivSecondPhrase>
-            <C.SecondPhrase>
-              Programar sem café é igual poeta sem poesia.
-            </C.SecondPhrase>
-          </C.DivSecondPhrase>
+
+          <C.SecondPhrase>
+            Programar sem café é igual poeta sem poesia.
+          </C.SecondPhrase>
 
           <C.EmojisProfile>
             <C.EmojisNameImg>

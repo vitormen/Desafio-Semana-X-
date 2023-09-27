@@ -8,12 +8,47 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
+export const Search = styled.div`
+  width: 20rem;
+  border-radius: 0.5rem;
+  background: #eff3f8;
+  color: #b4aeae;
+  font-size: 1rem;
+  padding: 0.62rem 0.85rem;
+  display: none;
+
+  &.hide-on-mobile {
+    @media (max-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+`;
+export const ImageSearch = styled.img`
+  width: 1.35213rem;
+  height: 1.5rem;
+`;
+export const SearchInput = styled.input`
+  border: none;
+  background: #eff3f8;
+  color: #b4aeae;
+  font-size: 1rem;
+  padding-left: 0.75rem;
+  font-family: Roboto Mono;
+  line-height: 1.5rem; /* 150% */
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: #b4aeae;
+  }
+`;
+
 export const DivCenter = styled.div`
   box-sizing: border-box;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   display: flex;
   align-items: flex-start;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
   padding-bottom: 1.86rem;
@@ -76,8 +111,7 @@ export const name = styled.p`
 export const MaritalStatus = styled.p`
   color: #4b4b4b;
   font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
+
   line-height: 1.5rem; /* 133.333% */
 `;
 
@@ -132,24 +166,27 @@ export const FirstPhrase = styled.p`
 `;
 
 export const DivSecondPhrase = styled.div`
-  width: 34rem;
-  max-width: 100%;
-  border-radius: 0.625rem;
-  background: #eff3f8;
+  // border-radius: 0.625rem;
+  // background: #eff3f8;
 
-  padding: 0 0.5rem;
+  // padding: 0 0.5rem;
 
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
 `;
 
 export const SecondPhrase = styled.p`
+  max-width: 34rem;
   color: #4b4b4b;
+  border-radius: 0.625rem;
+  background: #eff3f8;
   font-size: 1.125rem;
-  margin: 0.75rem 0;
+  padding: 0.57rem 10vw 0.7rem 0.75rem;
+  margin: 0;
 
   @media (max-width: 768px) {
     font-size: 0.75rem;
+    padding: 0.57rem 0vw 0.7rem 0.75rem;
   }
 `;
 
@@ -215,7 +252,7 @@ export const Like = styled(FiThumbsUp)`
 
 export const AboutYou = styled.div`
   margin-top: 2rem;
-  margin-bottom: 12.45rem;
+  margin-bottom: 15.25rem;
 `;
 
 export const DivAboutYou = styled.div`
