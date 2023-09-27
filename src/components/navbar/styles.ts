@@ -1,11 +1,19 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
+
+type mobileProps = {
+  $mobileLoggedOut?: boolean;
+  $moblieProfile?: boolean;
+  $mobileUserEdit?: boolean;
+
+};
+
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
 `;
 
-export const Nav = styled.div`
+export const Nav = styled.div<mobileProps>`
   height: 5.75rem;
   background: #fdfeff;
   display: flex;
@@ -14,7 +22,7 @@ export const Nav = styled.div`
   flex-wrap: wrap;
 
   @media (max-width: 768px) {
-    justify-content: space-between;
+    justify-content: ${(props) => props.$mobileLoggedOut? "center": props.$moblieProfile? "space-between": props.$mobileUserEdit? "center": "start"};
     padding: 0 2rem 0 2rem;
     height: 3.75rem;
   }
@@ -113,10 +121,13 @@ export const SearchInput = styled.input`
   }
 `;
 
-export const User = styled.div`
+export const User = styled.div<mobileProps>`
   display: flex;
   align-items: center;
   margin-left: 0.87rem;
+  @media (max-width: 768px){
+    display: ${(props) => (props.$moblieProfile && props.$mobileUserEdit)? "block" : "none"};
+  }
   p {
     margin-right: 0.25rem;
 
