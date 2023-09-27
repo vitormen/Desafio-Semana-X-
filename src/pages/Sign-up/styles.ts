@@ -41,6 +41,7 @@ export const Card = styled.div`
   }
 `;
 
+//props to pass values ​​to input
 type InputProps = {
   $widthinput: string;
   $margintop: string;

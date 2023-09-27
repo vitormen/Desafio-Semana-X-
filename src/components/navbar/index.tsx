@@ -3,6 +3,8 @@ import Search from "../../assets/Search.png";
 import CaretDown from "../../assets/CaretDown.png";
 import UserImage from "../../assets/User.png";
 
+
+//viewing conditions for each page type props
 interface INavbarProps {
   thereIsLoggedOut: boolean;
   thereIsProfile: boolean;
@@ -14,16 +16,20 @@ const Navbar: React.FC<INavbarProps> = ({
   thereIsProfile,
   thereIsUserEdit,
 }): JSX.Element => {
-  const handleOptionColor = (value: boolean) => {
+  const handleOptionColor = (value: boolean) => { //selected page color
     return value ? "#ED6D25" : "#4B4B4B";
   };
 
   return (
     <>
-      <C.Nav>
+      <C.Nav
+        $mobileLoggedOut={thereIsLoggedOut}
+        $moblieProfile={thereIsProfile}
+        $mobileUserEdit={thereIsUserEdit}>
         <C.MenuLeft>
           <C.StyledNavLink to="/">
             <C.LogoText>UOLkut</C.LogoText>
+            
           </C.StyledNavLink>
 
           {!thereIsProfile && !thereIsUserEdit ? (
@@ -60,8 +66,8 @@ const Navbar: React.FC<INavbarProps> = ({
           {!thereIsProfile && !thereIsUserEdit ? (
             " "
           ) : (
-            <C.User>
-              <C.UserImage src={UserImage}></C.UserImage>
+            <C.User $mobileUserEdit={thereIsUserEdit} $moblieProfile={thereIsProfile}>
+              <C.UserImage src={UserImage}  ></C.UserImage>
               <p className="hide-on-mobile">Gabriel Barbosa</p>
               <img
                 src={CaretDown}
