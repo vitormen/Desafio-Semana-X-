@@ -61,6 +61,7 @@ const Login = () => {
     
   };
 
+
   return (
     <>
       <Navbar
@@ -79,6 +80,7 @@ const Login = () => {
             <C.Input
               $widthinput={"21rem"}
               $margintop={"0.69rem"}
+              $inputvalid={emailInputIsInvalid}
               type="email"
               id="email"
               name="email"
@@ -94,6 +96,7 @@ const Login = () => {
             <C.Input
               $widthinput={"21rem"}
               $margintop={"1.5rem"}
+              $inputvalid={passwordInputIsInvalid}
               type="password"
               id="password"
               name="password"
