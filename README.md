@@ -1,6 +1,6 @@
 # Project UOLkut
 Welcome ! 
-"This is the second project carried out within the CompassUOL Scholarship Program. The project is a prototype of a social network."
+This is the second project carried out within the CompassUOL Scholarship Program. The project is a prototype of a social network.
 
 **Developers:** 
 - Gabriel Vieira
@@ -11,7 +11,7 @@ Welcome !
 ## Tecnologies Used
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) 
 
-##How to run the project
+## How to run the project
 After cloning the repository make sure that you have installed all the projects dependencies, for doing that in your prefered IDE run the following command on the terminal.
 
 `npm install`
