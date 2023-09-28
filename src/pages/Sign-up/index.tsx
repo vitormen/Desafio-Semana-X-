@@ -200,6 +200,7 @@ const SignUp = () => {
               $widthinput={"21rem"}
               $margintop={"0.69rem"}
               $widthmobileinput={"17rem"}
+              $inputvalid={emailInputHasError}
               onChange={combinedEmailChangeHandler}
               onBlur={emailBlurHandler}
               value={enteredEmail}
@@ -213,6 +214,7 @@ const SignUp = () => {
               $widthinput={"21rem"}
               $margintop={"1.5rem"}
               $widthmobileinput={"17rem"}
+              $inputvalid={passwordInputHasError}
               type="password"
               id="password"
               name="password"
@@ -228,6 +230,7 @@ const SignUp = () => {
               $widthinput={"21rem"}
               $margintop={"1rem"}
               $widthmobileinput={"17rem"}
+              $inputvalid={nameInputHasError}
               type="text"
               id="name"
               name="name"
@@ -243,6 +246,7 @@ const SignUp = () => {
                   $widthinput={"10rem"}
                   $margintop={"1rem"}
                   $widthmobileinput={"8rem"}
+                  $inputvalid={birthdayInputHasError}
                   type="text"
                   id="birthday"
                   name="birthday"
@@ -262,6 +266,7 @@ const SignUp = () => {
                   $widthinput={"10rem"}
                   $margintop={"1rem"}
                   $widthmobileinput={"8rem"}
+                  $inputvalid={professionInputHasError}
                   type="text"
                   id="profession"
                   name="profession"
@@ -281,6 +286,7 @@ const SignUp = () => {
                   $widthinput={"10rem"}
                   $margintop={"1rem"}
                   $widthmobileinput={"8rem"}
+                  $inputvalid={countryInputHasError}
                   type="text"
                   id="country"
                   name="country"
@@ -298,6 +304,7 @@ const SignUp = () => {
                   $widthinput={"10rem"}
                   $margintop={"1rem"}
                   $widthmobileinput={"8rem"}
+                  $inputvalid={cityInputHasError}
                   type="text"
                   id="city"
                   name="city"
