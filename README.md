@@ -36,19 +36,19 @@ This is the second project carried out within the CompassUOL Scholarship Program
 After cloning the repository make sure that you have installed all the projects dependencies, for doing that in your prefered IDE run the following command on the terminal.
 
 ```
-<npm install>
+npm install
 ```
 
 After running the installation command, now it's time to run the project, first open a second terminal window and run the following command to start the server, it will be responsible for registering the data and showing it in the appropriate places for the user, like profile and navbar
 
 ```
-<npm run server>
+npm run server
 ```
 
 After running the server now you need to run the local server that will be used to visualize the project, for that in a new terminal window run the following command.
 
 ```
-<npm run dev>
+npm run dev
 ```
 
 And now open the URL given by the last command output in your browser and you can view the project.
