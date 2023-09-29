@@ -17,7 +17,7 @@ export const PageContainer = styled.div`
   box-sizing: border-box;
   padding: 0.22rem;
   height: calc(100vh - 8.75rem);
-
+  
   @media (max-width: 768px) {
     height: calc(100vh - 5.75rem);
     align-items: start;
@@ -28,6 +28,7 @@ export const PageContainer = styled.div`
 
 export const RecoveryMenu = styled.div`
   width: 24rem;
+  height: 37.375rem;
   display: flex;
   flex-shrink: 0;
   border-radius: 1rem;
