@@ -1,5 +1,25 @@
 import styled from "styled-components";
 
+type ApiProps = {
+  $apiInvalid?: boolean;
+};
+
+export const Error = styled.div<ApiProps>`
+  position: fixed;
+  border: 1px solid red;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  background-color: white;
+  color: red;
+
+  left: 50%;
+  margin-top: 1rem;
+  transform: translateX(-50%);
+
+  display: ${(props) => (props.$apiInvalid ? "none" : "flex")};
+`;
+
 export const Container = styled.div`
   box-sizing: border-box;
   height: calc(100vh - 8.75rem);
@@ -10,7 +30,7 @@ export const Container = styled.div`
   position: relative;
   @media (max-width: 768px) {
     height: calc(100vh - 5.75rem);
-    align-items: start;
+
     margin-top: 1.06rem;
   }
 `;
@@ -66,7 +86,8 @@ export const Input = styled.input<InputProps>`
   padding: 1rem;
   border-radius: 0.5rem;
   background-color: #eff3f8;
-  border:${(props) => props.$inputvalid? '0.02rem solid #F00' : '0.02rem solid #eff3f8'};
+  border: ${(props) =>
+    props.$inputvalid ? "0.02rem solid #F00" : "0.02rem solid #eff3f8"};
   &:focus {
     outline: none;
   }
@@ -168,12 +189,10 @@ export const PasswordForgot = styled.p`
   cursor: pointer;
 `;
 
-
-
 export const AlertError = styled.p`
   position: absolute;
   font-size: 0.8rem;
-  color: #F00;
+  color: #f00;
   z-index: 1;
   margin: 0;
-`
+`;

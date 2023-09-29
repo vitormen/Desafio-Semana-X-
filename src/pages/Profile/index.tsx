@@ -73,6 +73,18 @@ const Profile = () => {
   let dia: number | string = arrData[1];
   let Aniversário: number | string = dia + " de " + meses[date.getMonth()];
 
+  let agora = new Date();
+  let hora = agora.getHours();
+  let saudacao;
+
+  if (hora < 12) {
+    saudacao = "Bom dia";
+  } else if (hora < 18) {
+    saudacao = "Boa tarde";
+  } else {
+    saudacao = "Boa noite";
+  }
+
   return (
     <>
       <Navbar
@@ -110,7 +122,9 @@ const Profile = () => {
         </C.EditsAndLeftProfile>
 
         <C.CenterProfile>
-          <C.FirstPhrase>Boa Tarde, {name}</C.FirstPhrase>
+          <C.FirstPhrase>
+            {saudacao}, {name} !
+          </C.FirstPhrase>
 
           <C.SecondPhrase>
             Programar sem café é igual poeta sem poesia.

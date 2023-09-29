@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import Logo from "../../assets/ps_orkut.png";
@@ -8,6 +9,8 @@ import CheckIcon from "../../assets/checkbox.png";
 import * as C from "./styles";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [checked, setChecked] = useState<boolean>(false);
   const [enteredEmail, setEnteredEmail] = useState<string>("");
 
@@ -51,19 +54,37 @@ const Login = () => {
     setEnteredEmailTouched(true);
   };
 
-  const formSubmissionHandler = () => {
+  const [isConnected, setIsConnected] = useState(Boolean);
+  const formSubmissionHandler = async () => {
     setEnteredPasswordTouched(true);
     setEnteredEmailTouched(true);
 
     if (!enteredPasswordIsValid) {
       return;
     }
-    setEnteredPassword("");
-    setEnteredPasswordTouched(false);
-    setEnteredEmail("");
-    setEnteredEmailTouched(false);
+    try {
+      await fetch("http://localhost:3000/informations")
+        .then(() => setIsConnected(true))
+        .catch(() => setIsConnected(false));
+
+      if (formIsValid && isConnected) {
+        setEnteredPassword("");
+        setEnteredPasswordTouched(false);
+        setEnteredEmail("");
+
+        navigate("/profile");
+      } else {
+        navigate("/");
+      }
+    } catch (error) {}
   };
 
+  const ApiTest = () => {
+    fetch("http://localhost:3000/informations")
+      .then(() => setIsConnected(true))
+      .catch(() => setIsConnected(false));
+  };
+  ApiTest();
 
   return (
     <>
@@ -72,6 +93,9 @@ const Login = () => {
         thereIsProfile={false}
         thereIsUserEdit={false}
       />
+      <C.Error $apiInvalid={isConnected}>
+        Api não conectada, por favor, inicilize com o comando "npm run server"
+      </C.Error>
       <C.Container>
         <Banner />
         <C.Card>
@@ -116,19 +140,14 @@ const Login = () => {
               <C.Text>Lembrar minha senha</C.Text>
             </C.CheckboxContainer>
 
-            <Link
-              to={formIsValid ? "/profile" : "/"}
-              style={{ textDecoration: "none" }}
+            <C.Button
+              $background={"#ED6D25"}
+              $color={"#FFF"}
+              type={"submit"}
+              onClick={formSubmissionHandler}
             >
-              <C.Button
-                $background={"#ED6D25"}
-                $color={"#FFF"}
-                type={"submit"}
-                onClick={formSubmissionHandler}
-              >
-                Entrar
-              </C.Button>
-            </Link>
+              Entrar
+            </C.Button>
           </div>
           <Link to={"/signup"} style={{ textDecoration: "none" }}>
             <C.Button $background={"#EFF3F8"} $color={"#ED6D25"}>
