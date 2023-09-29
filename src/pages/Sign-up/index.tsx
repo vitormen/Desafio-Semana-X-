@@ -119,7 +119,8 @@ const SignUp = () => {
   } = useInput((value) => {
     const selectedDate = parse(value, "P", new Date(), { locale: ptBR });
     const currentDate = new Date();
-    return isValid(selectedDate) && selectedDate < currentDate;
+    const initialDate = new Date('01/01/1900')
+    return isValid(selectedDate) && (selectedDate > initialDate) && (selectedDate < currentDate) ;
   });
   const {
     value: enteredProfession,
