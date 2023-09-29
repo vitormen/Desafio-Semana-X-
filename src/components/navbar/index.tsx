@@ -2,7 +2,7 @@ import * as C from "./styles";
 import Search from "../../assets/Search.png";
 import CaretDown from "../../assets/CaretDown.png";
 import UserImage from "../../assets/User.png";
-
+import { useState, useEffect } from "react";
 
 //viewing conditions for each page type props
 interface INavbarProps {
@@ -16,20 +16,32 @@ const Navbar: React.FC<INavbarProps> = ({
   thereIsProfile,
   thereIsUserEdit,
 }): JSX.Element => {
-  const handleOptionColor = (value: boolean) => { //selected page color
+  const handleOptionColor = (value: boolean) => {
+    //selected page color
     return value ? "#ED6D25" : "#4B4B4B";
   };
+
+  const [name, setName] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:3000/informations")
+      .then((response) => response.json())
+      .then((data) => {
+        setName(data[0].name);
+      })
+      .catch((error) => console.error("Erro:", error));
+  }, []);
 
   return (
     <>
       <C.Nav
         $mobileLoggedOut={thereIsLoggedOut}
         $moblieProfile={thereIsProfile}
-        $mobileUserEdit={thereIsUserEdit}>
+        $mobileUserEdit={thereIsUserEdit}
+      >
         <C.MenuLeft>
           <C.StyledNavLink to="/">
             <C.LogoText>UOLkut</C.LogoText>
-            
           </C.StyledNavLink>
 
           {!thereIsProfile && !thereIsUserEdit ? (
@@ -66,9 +78,12 @@ const Navbar: React.FC<INavbarProps> = ({
           {!thereIsProfile && !thereIsUserEdit ? (
             " "
           ) : (
-            <C.User $mobileUserEdit={thereIsUserEdit} $moblieProfile={thereIsProfile}>
-              <C.UserImage src={UserImage}  ></C.UserImage>
-              <p className="hide-on-mobile">Gabriel Barbosa</p>
+            <C.User
+              $mobileUserEdit={thereIsUserEdit}
+              $moblieProfile={thereIsProfile}
+            >
+              <C.UserImage src={UserImage}></C.UserImage>
+              <p className="hide-on-mobile">{name}</p>
               <img
                 src={CaretDown}
                 alt="carretDown"

@@ -1,12 +1,10 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-
 type mobileProps = {
   $mobileLoggedOut?: boolean;
   $moblieProfile?: boolean;
   $mobileUserEdit?: boolean;
-
 };
 
 export const StyledNavLink = styled(NavLink)`
@@ -14,17 +12,25 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 export const Nav = styled.div<mobileProps>`
-  height: 5.75rem;
   background: #fdfeff;
   display: flex;
   overflow: hidden;
   justify-content: center;
   flex-wrap: wrap;
+  column-gap: 8.87rem;
 
   @media (max-width: 768px) {
-    justify-content: ${(props) => props.$mobileLoggedOut? "center": props.$moblieProfile? "space-between": props.$mobileUserEdit? "center": "start"};
+    justify-content: ${(props) =>
+      props.$mobileLoggedOut
+        ? "center"
+        : props.$moblieProfile
+        ? ""
+        : props.$mobileUserEdit
+        ? "center"
+        : "start"};
     padding: 0 2rem 0 2rem;
     height: 3.75rem;
+    column-gap: 24vw;
   }
 `;
 
@@ -35,6 +41,10 @@ export const MenuLeft = styled.div`
 export const MenuRight = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 1100px) {
+    margin-bottom: 0.5rem;
+  }
 `;
 export const LogoText = styled.h1`
   color: #ed6d25;
@@ -84,7 +94,6 @@ export const Search = styled.div`
   color: #b4aeae;
   font-size: 1rem;
   padding: 0.62rem 0.94rem;
-  margin-left: 8.87rem;
   display: flex;
   align-items: center;
   color: #b4aeae;
@@ -126,7 +135,8 @@ export const User = styled.div<mobileProps>`
   align-items: center;
   margin-left: 0.87rem;
   @media (max-width: 768px){
-    display: ${(props) => (props.$moblieProfile && props.$mobileUserEdit)? "block" : "none"};
+    display: ${(props) =>
+      props.$moblieProfile && props.$mobileUserEdit ? "block" : "none"};
   }
   p {
     margin-right: 0.25rem;

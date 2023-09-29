@@ -10,17 +10,18 @@ import * as C from "./styles";
 const Login = () => {
   const [checked, setChecked] = useState<boolean>(false);
   const [enteredEmail, setEnteredEmail] = useState<string>("");
-  
+
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   const enteredEmailIsValid = emailRegex.test(enteredEmail);
   const [enteredPassword, setEnteredPassword] = useState("");
-  
+
   const [enteredPasswordTouched, setEnteredPasswordTouched] = useState(false);
   const [enteredEmailTouched, setEnteredEmailTouched] = useState(false);
-  
+
   const enteredPasswordIsValid = enteredPassword.trim() !== "";
   const emailInputIsInvalid = !enteredEmailIsValid && enteredEmailTouched;
-  const passwordInputIsInvalid = !enteredPasswordIsValid && enteredPasswordTouched;
+  const passwordInputIsInvalid =
+    !enteredPasswordIsValid && enteredPasswordTouched;
 
   const handleCheckboxChange = () => {
     setChecked(!checked);
@@ -30,8 +31,9 @@ const Login = () => {
     formIsValid = true;
   }
 
-
-  const passwordInputChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const passwordInputChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setEnteredPassword(event.target.value);
   };
 
@@ -39,7 +41,9 @@ const Login = () => {
     setEnteredPasswordTouched(true);
   };
 
-  const emailInputChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const emailInputChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setEnteredEmail(event.target.value);
   };
 
@@ -58,7 +62,6 @@ const Login = () => {
     setEnteredPasswordTouched(false);
     setEnteredEmail("");
     setEnteredEmailTouched(false);
-    
   };
 
 
@@ -88,11 +91,8 @@ const Login = () => {
               value={enteredEmail}
               onChange={emailInputChangeHandler}
               onBlur={emailInputBlurHandler}
-              
             ></C.Input>
-            {emailInputIsInvalid && (
-              <C.AlertError>Email inválido</C.AlertError>
-            )}
+            {emailInputIsInvalid && <C.AlertError>Email inválido</C.AlertError>}
             <C.Input
               $widthinput={"21rem"}
               $margintop={"1.5rem"}
@@ -105,7 +105,7 @@ const Login = () => {
               onChange={passwordInputChangeHandler}
               onBlur={passwordInputBlurHandler}
             ></C.Input>
-            {passwordInputIsInvalid &&(
+            {passwordInputIsInvalid && (
               <C.AlertError>Senha inválida</C.AlertError>
             )}
             <C.CheckboxContainer onClick={handleCheckboxChange}>
@@ -115,14 +115,22 @@ const Login = () => {
               </C.StyledCheckbox>
               <C.Text>Lembrar minha senha</C.Text>
             </C.CheckboxContainer>
-            
-            <Link to={formIsValid? "/profile": "/"} style={{textDecoration: "none"}}>
-              <C.Button $background={"#ED6D25"} $color={"#FFF"}  type={"submit"} onClick={formSubmissionHandler}>
+
+            <Link
+              to={formIsValid ? "/profile" : "/"}
+              style={{ textDecoration: "none" }}
+            >
+              <C.Button
+                $background={"#ED6D25"}
+                $color={"#FFF"}
+                type={"submit"}
+                onClick={formSubmissionHandler}
+              >
                 Entrar
               </C.Button>
             </Link>
           </div>
-          <Link to={"/signup"} style={{textDecoration: "none"}}>
+          <Link to={"/signup"} style={{ textDecoration: "none" }}>
             <C.Button $background={"#EFF3F8"} $color={"#ED6D25"}>
               Criar conta
             </C.Button>
@@ -132,7 +140,7 @@ const Login = () => {
             style={{
               textAlign: "center",
               margin: "2rem 0 3.06rem 0",
-              textDecoration: "none"
+              textDecoration: "none",
             }}
           >
             <C.PasswordForgot>Esqueci a minha senha</C.PasswordForgot>

@@ -8,7 +8,8 @@ interface FormData {
   job: string;
   country: string;
   city: string;
-  selectField: string; // Adicione aqui o novo campo de seleção
+  selectField: string;
+  relationship: string;
 }
 
 export const useSaveData = (url: string) => {
@@ -20,7 +21,8 @@ export const useSaveData = (url: string) => {
     job: "",
     country: "",
     city: "",
-    selectField: "", // Inicialize o novo campo de seleção aqui
+    selectField: "",
+    relationship: "",
   });
 
   const saveData = async () => {
