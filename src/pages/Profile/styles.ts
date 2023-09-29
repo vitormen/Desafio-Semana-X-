@@ -8,6 +8,8 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
+export const TriangleImg = styled.img``;
+
 export const Search = styled.div`
   width: 20rem;
   border-radius: 0.5rem;

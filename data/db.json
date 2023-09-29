@@ -1,15 +1,3 @@
 {
-  "informations": [
-    {
-      "email": "luispedrogaldino53@gmail.com",
-      "password": "TESTE",
-      "name": "TESTE",
-      "birth": "01/09/2001",
-      "job": "TESTE",
-      "country": "TESTE",
-      "city": "TESTE",
-      "selectField": "1",
-      "id": 1
-    }
-  ]
+  "informations": []
 }

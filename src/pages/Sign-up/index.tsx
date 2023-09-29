@@ -71,12 +71,6 @@ const SignUp = () => {
     setData({ ...data, city: event.target.value });
   };
 
-  const combinedRelationshipChangeHandler = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setData({ ...data, selectField: event.target.value });
-  };
-
   //select input states and values
   const [selectValue, setSelecValue] = useState<string>("");
   const [options, setOptions] = useState<Boolean>(false);
@@ -88,7 +82,7 @@ const SignUp = () => {
     { _id: "5", name: "Preocupado" },
   ];
 
-//form validation with custom hooks
+  //form validation with custom hooks
   const {
     value: enteredEmail,
     isValid: enteredEmailIsValid,
@@ -152,7 +146,7 @@ const SignUp = () => {
     reset: cityReset,
   } = useInput((value) => value.trim() !== "");
 
-//check if the form is valid
+  //check if the form is valid
   let formIsValid = false;
   if (
     enteredNameIsValid &&
@@ -165,7 +159,7 @@ const SignUp = () => {
   ) {
     formIsValid = true;
   }
-//function to reset if the form is valid
+  //function to reset if the form is valid
   const formSubmissionHandler = () => {
     emailReset();
     passwordReset();
@@ -328,7 +322,11 @@ const SignUp = () => {
                         <C.Option
                           onClick={() => {
                             setSelecValue(option.name);
-                            setData({ ...data, selectField: option._id });
+                            setData((prevData) => ({
+                              ...prevData,
+                              relationship: option.name,
+                              selectField: option._id,
+                            }));
                           }}
                         >
                           {option.name}
