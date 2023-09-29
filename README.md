@@ -1,27 +1,27 @@
-# React + TypeScript + Vite
+# Project UOLkut
+Welcome ! 
+This is the second project carried out within the CompassUOL Scholarship Program. The project is a prototype of a social network.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Developers:** 
+- Gabriel Vieira
+- Luiz Pedro
+- Samuel Alcantara
+- Vitor Menezes
 
-Currently, two official plugins are available:
+## Tecnologies Used
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to run the project
+After cloning the repository make sure that you have installed all the projects dependencies, for doing that in your prefered IDE run the following command on the terminal.
 
-## Expanding the ESLint configuration
+`npm install`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+After running the install command now is time to run the project, first open a second terminal window and run the following command to start the server.
 
-- Configure the top-level `parserOptions` property like this:
+`npm run server`
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+After running the server now you need to run the local server that will be used to visualize the project, for that in a new terminal window run the following command.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+`npm run dev`
+
+And now open the URL provided by the output of the last command on your browser and you will be able the visualize the project.

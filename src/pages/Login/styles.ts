@@ -38,6 +38,7 @@ export const Card = styled.div`
 type InputProps = {
   $widthinput: string;
   $margintop: string;
+  $inputvalid?: boolean;
 };
 
 export const Title = styled.p`
@@ -64,8 +65,8 @@ export const Input = styled.input<InputProps>`
   font-size: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  background: #eff3f8;
-  border: none;
+  background-color: #eff3f8;
+  border:${(props) => props.$inputvalid? '0.02rem solid #F00' : '0.02rem solid #eff3f8'};
   &:focus {
     outline: none;
   }
