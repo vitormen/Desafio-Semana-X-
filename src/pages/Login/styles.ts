@@ -5,17 +5,16 @@ type ApiProps = {
 };
 
 export const Error = styled.div<ApiProps>`
-  position: fixed;
+  width: 25rem;
   border: 1px solid red;
   align-items: center;
   padding: 1rem;
   border-radius: 0.8rem;
   background-color: white;
   color: red;
-
   left: 50%;
+  margin-left: 40%;
   margin-top: 1rem;
-  transform: translateX(-50%);
 
   display: ${(props) => (props.$apiInvalid ? "none" : "flex")};
 `;

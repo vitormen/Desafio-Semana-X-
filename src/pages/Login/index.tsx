@@ -55,6 +55,8 @@ const Login = () => {
   };
 
   const [isConnected, setIsConnected] = useState(Boolean);
+  const [isSave, setisSave] = useState(false);
+
   const formSubmissionHandler = async () => {
     setEnteredPasswordTouched(true);
     setEnteredEmailTouched(true);
@@ -63,20 +65,27 @@ const Login = () => {
       return;
     }
     try {
-      await fetch("http://localhost:3000/informations")
-        .then(() => setIsConnected(true))
-        .catch(() => setIsConnected(false));
+      const response = await fetch("http://localhost:3000/informations");
+      const data = await response.json();
 
-      if (formIsValid && isConnected) {
-        setEnteredPassword("");
-        setEnteredPasswordTouched(false);
-        setEnteredEmail("");
-
-        navigate("/profile");
+      if (data.length === 0) {
+        setisSave(true);
+        return;
       } else {
-        navigate("/");
+        setIsConnected(true);
+        if (formIsValid && isConnected) {
+          setEnteredPassword("");
+          setEnteredPasswordTouched(false);
+          setEnteredEmail("");
+
+          navigate("/profile");
+        } else {
+          navigate("/");
+        }
       }
-    } catch (error) {}
+    } catch (error) {
+      setIsConnected(false);
+    }
   };
 
   const ApiTest = () => {
@@ -93,9 +102,15 @@ const Login = () => {
         thereIsProfile={false}
         thereIsUserEdit={false}
       />
-      <C.Error $apiInvalid={isConnected}>
-        Api não conectada, por favor, inicilize com o comando "npm run server"
-      </C.Error>
+      {isConnected ? null : (
+        <C.Error>
+          Api não conectada, por favor, inicilize com o comando "npm run server"
+        </C.Error>
+      )}
+      {isSave ? (
+        <C.Error>Por favor, para continuar realize o cadastro</C.Error>
+      ) : null}
+
       <C.Container>
         <Banner />
         <C.Card>
