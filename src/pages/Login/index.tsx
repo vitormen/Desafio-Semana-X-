@@ -7,6 +7,7 @@ import Logo from "../../assets/ps_orkut.png";
 import Banner from "../../components/homepageImg";
 import CheckIcon from "../../assets/checkbox.png";
 import * as C from "./styles";
+import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -65,8 +66,8 @@ const Login = () => {
       return;
     }
     try {
-      const response = await fetch("http://localhost:3000/informations");
-      const data = await response.json();
+      const {data} = await axios.post("http://localhost:3000/login", {email:enteredEmail, password:enteredPassword})
+       
 
       if (data.length === 0) {
         setisSave(true);
@@ -87,13 +88,6 @@ const Login = () => {
       setIsConnected(false);
     }
   };
-
-  const ApiTest = () => {
-    fetch("http://localhost:3000/informations")
-      .then(() => setIsConnected(true))
-      .catch(() => setIsConnected(false));
-  };
-  ApiTest();
 
   return (
     <>
