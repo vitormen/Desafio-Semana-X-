@@ -13,7 +13,7 @@ import { useSaveData } from "../../hooks/use-saveDate";
 
 const SignUp = () => {
   const { data, setData, saveData } = useSaveData(
-    "http://localhost:3000/informations"
+    "http://localhost:3000/register"
   );
 
   const emailInputChangeHandler = (
