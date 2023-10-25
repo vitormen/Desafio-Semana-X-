@@ -9,8 +9,6 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "server": "json-server ./data/db.json -m ./node_modules/json-server-auth -p",
-    "vite": "vite",
-    "server": "json-server ./data/db.json -m ./node_modules/json-server-auth -p",
     "vite": "vite"
 
   },
