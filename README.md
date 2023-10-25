@@ -20,7 +20,7 @@ This is the second project carried out within the CompassUOL Scholarship Program
 ![JSON-SERVER](https://img.shields.io/badge/JSON_Server-0F0F0F?style=for-the-badge&logo=json&logoColor=white)
 ![REACT-ICONS](https://img.shields.io/badge/React_Icons-0F0F0F?style=for-the-badge&logo=react&logoColor=white)
 ![DATE-FNS](https://img.shields.io/badge/Date_Fns-0F0F0F?style=for-the-badge&logo=DATE&logoColor=white)
-![JWT](http://jwt.io/img/logo-asset.svg)
+![JWT](https://img.shields.io/badge/JWT-0F0F0F?style=for-the-badge&logo=DATE&logoColor=white)
 
 ## Project Features
 
